@@ -1199,19 +1199,61 @@
 <!--                   SINGLE ARTICLE PAGE                       -->
 <!-- ============================================================ -->
 <div id="page-article" class="page">
-  <div class="container">
-    <div class="layout-grid" style="margin-top: 32px;">
-      <article class="article-single">
-        <button class="back-btn" onclick="goBack()">← Back to Articles</button>
-        <div class="article-single-header">
-          <span class="cat-tag" id="articleCatTag"></span>
-          <h1 id="articleTitle"></h1>
-          <div class="article-single-meta">
-            <span>✍️ By <span class="author" id="articleAuthor"></span></span>
-            <span id="articleDate"></span>
-            <span id="articleReadTime"></span>
-          </div>
+    
+    <div class="ad-top-black-bar">
+        <div class="container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXX"
+                 data-ad-slot="YYYYYYYYYY"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+    </div>
+
+    <div class="ad-side-floating">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:160px;height:600px"
+             data-ad-client="ca-pub-XXXXXXXXXXXX"
+             data-ad-slot="YYYYYYYYYY"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="container">
+        <div class="layout-grid" style="margin-top: 20px;">
+            <article class="article-single">
+                <button class="back-btn" onclick="goBack()">← Back to Articles</button>
+                <div class="article-single-header">
+                    <span class="cat-tag" id="articleCatTag"></span>
+                    <h1 id="articleTitle"></h1>
+                    <div class="article-single-meta">
+                        <span>✍️ By <span class="author" id="articleAuthor"></span></span>
+                        <span id="articleDate"></span>
+                        <span id="articleReadTime"></span>
+                    </div>
+                </div>
+                
+                <img class="article-hero-img" id="articleImg" src="" alt="" />
+                
+                <div class="article-content" id="articleContent">
+                    </div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="ad-unit ad-rectangle"></div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="ad-bottom-sticky">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-XXXXXXXXXXXX"
+             data-ad-slot="YYYYYYYYYY"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
         <!-- IN-ARTICLE AD TOP -->
         <div class="ad-container" style="margin: 0 0 24px; padding: 12px 0;"><div class="ad-unit ad-responsive"></div></div>
         <img class="article-hero-img" id="articleImg" src="" alt="" />
