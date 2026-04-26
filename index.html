@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ===== PRIMARY META TAGS ===== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>WealthEdge – Personal Finance, Investing & Money Tips</title>
-  <meta name="description" content="WealthEdge is your go-to resource for personal finance, investing, cryptocurrency, real estate and smart money strategies." />
-  
+  <meta name="description" content="WealthEdge is your go-to resource for personal finance, investing, cryptocurrency, real estate and smart money strategies. Practical advice for Europeans and Americans." />
+  <meta name="keywords" content="personal finance, investing, savings, cryptocurrency, ETF, real estate, retirement, budget, passive income, money tips, financial advice, Europe, USA, stock market, dividends" />
+  <meta name="author" content="WealthEdge Editorial Team" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="3 days" />
+  <meta name="rating" content="general" />
+  <meta name="category" content="Finance, Investment, Money" />
+  <meta name="coverage" content="Worldwide" />
+  <meta name="distribution" content="Global" />
+  <meta name="target" content="all" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <link rel="canonical" href="https://www.wealthedge.blog/" />
+
+  <!-- ===== OPEN GRAPH (FACEBOOK / LINKEDIN) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.wealthedge.blog/" />
+  <meta property="og:title" content="WealthEdge – Personal Finance, Investing & Money Tips" />
+  <meta property="og:description" content="Practical personal finance advice, investing guides, and money strategies for Europeans and Americans. Build wealth smarter." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=630&fit=crop" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="WealthEdge Personal Finance Blog" />
+  <meta property="og:site_name" content="WealthEdge" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="article:publisher" content="https://www.facebook.com/wealthedgeblog" />
+
+  <!-- ===== TWITTER / X CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@WealthEdgeBlog" />
+  <meta name="twitter:creator" content="@WealthEdgeBlog" />
+  <meta name="twitter:title" content="WealthEdge – Personal Finance, Investing & Money Tips" />
+  <meta name="twitter:description" content="Practical personal finance, investing and money strategies for Europeans and Americans." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=630&fit=crop" />
+
+  <!-- ===== GEO / REGIONAL ===== -->
+  <meta name="geo.region" content="US" />
+  <meta name="geo.region" content="GB" />
+  <meta name="geo.region" content="DE" />
+  <meta name="geo.region" content="FR" />
+  <meta name="geo.region" content="ES" />
+  <meta name="ICBM" content="51.5074, -0.1278" />
+  <meta name="geo.placename" content="Europe & United States" />
+
+  <!-- ===== SCHEMA.ORG JSON-LD ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WealthEdge",
+    "url": "https://www.wealthedge.blog",
+    "description": "Personal Finance, Investing & Money Tips for Europe and USA",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.wealthedge.blog/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "WealthEdge",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.wealthedge.blog/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- ===== ADSENSE PLACEHOLDER ===== -->
+  <!-- Replace ca-pub-XXXXXXXXXXXXXXXXX with your real AdSense publisher ID -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+  <!-- ===== FONTS ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -28,6 +102,8 @@
       --text-main: #1c1a18;
       --text-body: #3d3a35;
       --text-muted: #7a7570;
+      --accent-red: #c0392b;
+      --accent-green: #1a7a4a;
       --border: #e2ddd6;
       --shadow: 0 4px 24px rgba(13,27,42,0.10);
       --shadow-lg: 0 12px 48px rgba(13,27,42,0.16);
@@ -37,9 +113,45 @@
       --font-body: 'Source Serif 4', Georgia, serif;
       --font-ui: 'DM Sans', sans-serif;
     }
+/* --- Estilo Menú Móvil --- */
+#mobileMenu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--navy); 
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
+#mobileMenu button {
+    background: none;
+    border: none;
+    color: var(--white);
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+#mobileMenu.active {
+    display: flex !important;
+}
+
+/* Ocultar en PC */
+@media (min-width: 769px) {
+    #mobileMenu, .hamburger {
+        display: none !important;
+    }
+}
     /* ===== RESET & BASE ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
     body {
       font-family: var(--font-body);
       background: var(--off-white);
@@ -47,8 +159,32 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: var(--font-ui); }
+    input, textarea, select { font-family: var(--font-ui); }
 
-    /* ===== HEADER & NAVIGATION ===== */
+    /* ===== PAGE SECTIONS (SPA) ===== */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ===== TOP NOTIFICATION BAR ===== */
+    .top-bar {
+      background: var(--navy);
+      color: var(--gray-mid);
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      padding: 7px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .top-bar a { color: var(--gold); }
+    .top-bar-right { display: flex; gap: 16px; }
+
+    /* ===== HEADER ===== */
     header {
       background: var(--navy);
       box-shadow: 0 2px 20px rgba(13,27,42,0.3);
@@ -65,7 +201,12 @@
       justify-content: space-between;
       height: 70px;
     }
-    .logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
     .logo-icon {
       width: 38px; height: 38px;
       background: var(--gold);
@@ -76,9 +217,16 @@
       color: var(--navy);
       font-size: 1.2rem;
     }
-    .logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.45rem; color: var(--white); }
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.45rem;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
     .logo-text span { color: var(--gold); }
 
+    /* ===== NAV ===== */
     nav { display: flex; align-items: center; gap: 4px; }
     .nav-link {
       font-family: var(--font-ui);
@@ -89,8 +237,9 @@
       border-radius: 4px;
       transition: all 0.2s;
       cursor: pointer;
+      white-space: nowrap;
     }
-    .nav-link:hover { color: var(--gold); background: rgba(232,168,56,0.1); }
+    .nav-link:hover, .nav-link.active { color: var(--gold); background: rgba(232,168,56,0.1); }
 
     /* Dropdown */
     .nav-item { position: relative; }
@@ -107,162 +256,2226 @@
       visibility: hidden;
       transform: translateY(-8px);
       transition: all 0.2s;
+      z-index: 100;
     }
     .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-    .nav-dropdown button {
-      display: block; width: 100%; text-align: left; padding: 11px 18px;
-      font-family: var(--font-ui); font-size: 0.87rem; color: var(--text-body);
-    }
-    .nav-dropdown button:hover { background: var(--gray-light); color: var(--navy); }
-
-    /* Hamburger & Mobile Menu */
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
-
-    #mobileMenu {
-      display: none;
-      flex-direction: column;
-      background-color: var(--navy-mid);
+    .nav-dropdown a, .nav-dropdown button {
+      display: block;
       width: 100%;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      z-index: 999;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      text-align: left;
+      padding: 11px 18px;
+      font-family: var(--font-ui);
+      font-size: 0.87rem;
+      color: var(--text-body);
+      transition: background 0.15s;
     }
-    #mobileMenu button {
-      color: white; padding: 15px 20px; text-align: left; width: 100%; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    #mobileMenu.open { display: flex !important; }
+    .nav-dropdown a:hover, .nav-dropdown button:hover { background: var(--gray-light); color: var(--navy); }
 
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+
+    /* ===== AD UNIT STYLES ===== */
+    .ad-unit {
+      background: #f5f3ef;
+      border: 1px dashed #c5bfb5;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ad-unit::before { content: 'Advertisement'; }
+    .ad-leaderboard { width: 100%; height: 90px; max-width: 728px; margin: 0 auto; }
+    .ad-responsive { width: 100%; height: 90px; }
+    .ad-rectangle { width: 300px; height: 250px; }
+    .ad-halfpage { width: 300px; height: 600px; }
+    .ad-inline { width: 100%; height: 90px; margin: 28px 0; }
+    .ad-container { text-align: center; padding: 12px 0; background: var(--gray-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 0; }
+    /* Replace dashed box with real AdSense code:
+       <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXX" data-ad-slot="YYYYY" data-ad-format="auto" data-full-width-responsive="true"></ins>
+       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    */
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .layout-grid { display: grid; grid-template-columns: 1fr 320px; gap: 40px; align-items: start; }
+    .sidebar { position: sticky; top: 90px; }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 14px 0;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .breadcrumb span { color: var(--gold-dark); cursor: pointer; }
+    .breadcrumb span:hover { text-decoration: underline; }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
+    }
+    .hero-main {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      group: true;
+    }
+    .hero-main img { width: 100%; height: 420px; object-fit: cover; transition: transform 0.4s; }
+    .hero-main:hover img { transform: scale(1.03); }
+    .hero-main-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(13,27,42,0.92));
+      padding: 32px 28px 28px;
+    }
+    .hero-cat-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+    .hero-main h2 {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .hero-main p { color: rgba(255,255,255,0.75); font-size: 0.9rem; }
+    .hero-meta { color: rgba(255,255,255,0.55); font-family: var(--font-ui); font-size: 0.78rem; margin-top: 10px; }
+
+    .hero-stack { display: flex; flex-direction: column; gap: 16px; }
+    .hero-card {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 14px;
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hero-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .hero-card img { width: 130px; height: 100px; object-fit: cover; }
+    .hero-card-body { padding: 12px 14px 12px 0; }
+    .hero-card-body .cat-tag { margin-bottom: 6px; }
+    .hero-card-body h3 { font-family: var(--font-display); font-size: 0.97rem; font-weight: 600; line-height: 1.35; color: var(--text-main); }
+    .hero-card-body .meta { font-family: var(--font-ui); font-size: 0.76rem; color: var(--text-muted); margin-top: 6px; }
+
+    /* ===== CATEGORY TAG ===== */
+    .cat-tag {
+      display: inline-block;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 9px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .cat-investing { background: #e8f0fe; color: #1a56c4; }
+    .cat-savings { background: #e6f4ea; color: #1a7a4a; }
+    .cat-crypto { background: #fff3e0; color: #c56a00; }
+    .cat-realestate { background: #fce4ec; color: #b71c6a; }
+    .cat-retirement { background: #ede7f6; color: #512da8; }
+    .cat-personalfinance { background: #e0f2f1; color: #00695c; }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      position: relative;
+    }
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -14px; left: 0;
+      width: 40px; height: 3px;
+      background: var(--gold);
+    }
+    .view-all-btn {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      padding: 6px 14px;
+      border: 1.5px solid var(--gold);
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .view-all-btn:hover { background: var(--gold); color: var(--navy); }
+
+    /* ===== ARTICLE CARDS GRID ===== */
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .articles-grid-2col { grid-template-columns: repeat(2, 1fr); }
+
+    .article-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .article-card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.4s; }
+    .article-card:hover img { transform: scale(1.04); }
+    .article-card-body { padding: 18px 20px 20px; }
+    .article-card-body .cat-tag { margin-bottom: 10px; }
+    .article-card-body h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; line-height: 1.35; color: var(--text-main); margin-bottom: 10px; }
+    .article-card-body p { font-size: 0.88rem; color: var(--text-body); line-height: 1.6; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .article-card-footer { display: flex; align-items: center; justify-content: space-between; }
+    .article-meta { font-family: var(--font-ui); font-size: 0.76rem; color: var(--text-muted); }
+    .read-more {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.2s;
+    }
+    .read-more:hover { gap: 8px; }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar-widget {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .sidebar-widget-title {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sidebar-widget-title::before { content: ''; display: block; width: 4px; height: 16px; background: var(--gold); border-radius: 2px; }
+    .sidebar-widget-body { padding: 18px 20px; }
+    .sidebar-cat-list { display: flex; flex-direction: column; gap: 10px; }
+    .sidebar-cat-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-ui);
+      font-size: 0.88rem;
+      color: var(--text-body);
+      cursor: pointer;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .sidebar-cat-item:last-child { border-bottom: none; }
+    .sidebar-cat-item:hover { color: var(--gold-dark); }
+    .sidebar-cat-count { background: var(--gray-light); color: var(--text-muted); font-size: 0.75rem; padding: 2px 8px; border-radius: 10px; }
+
+    .popular-list { display: flex; flex-direction: column; gap: 14px; }
+    .popular-item { display: grid; grid-template-columns: 70px 1fr; gap: 12px; cursor: pointer; }
+    .popular-item img { width: 70px; height: 56px; object-fit: cover; border-radius: 4px; }
+    .popular-item-body h4 { font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; line-height: 1.3; color: var(--text-main); margin-bottom: 4px; }
+    .popular-item-body .meta { font-family: var(--font-ui); font-size: 0.73rem; color: var(--text-muted); }
+
+    .newsletter-form { display: flex; flex-direction: column; gap: 10px; }
+    .newsletter-form p { font-size: 0.87rem; color: var(--text-body); margin-bottom: 4px; }
+    .newsletter-form input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .newsletter-form input:focus { border-color: var(--gold); }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 11px 20px;
+      border-radius: 4px;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn-primary:hover { background: var(--gold-dark); color: var(--white); }
+
+    /* ===== TAGS CLOUD ===== */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag-item {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      padding: 5px 12px;
+      background: var(--gray-light);
+      color: var(--text-body);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid var(--border);
+    }
+    .tag-item:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* ===== ARTICLE SINGLE ===== */
+    .article-single { max-width: 860px; }
+    .article-single-header { margin-bottom: 28px; }
+    .article-single-header h1 { font-family: var(--font-display); font-size: 2.1rem; font-weight: 900; line-height: 1.25; color: var(--text-main); margin: 14px 0; }
+    .article-single-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); }
+    .article-single-meta .author { color: var(--text-body); font-weight: 600; }
+    .article-hero-img { width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 32px; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; color: var(--text-body); }
+    .article-content h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--text-main); margin: 36px 0 14px; }
+    .article-content h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--text-main); margin: 28px 0 10px; }
+    .article-content p { margin-bottom: 18px; }
+    .article-content ul, .article-content ol { margin: 14px 0 18px 24px; }
+    .article-content li { margin-bottom: 8px; }
+    .article-content blockquote {
+      border-left: 4px solid var(--gold);
+      margin: 28px 0;
+      padding: 16px 24px;
+      background: #fdf9f0;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      color: var(--text-body);
+    }
+    .article-content strong { color: var(--text-main); }
+    .article-tags { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .article-tags h4 { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 12px; }
+    .share-bar { display: flex; gap: 10px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); align-items: center; flex-wrap: wrap; }
+    .share-bar span { font-family: var(--font-ui); font-size: 0.83rem; font-weight: 600; color: var(--text-muted); }
+    .share-btn { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; padding: 8px 16px; border-radius: 4px; transition: all 0.2s; cursor: pointer; }
+    .share-twitter { background: #1da1f2; color: #fff; }
+    .share-facebook { background: #1877f2; color: #fff; }
+    .share-linkedin { background: #0a66c2; color: #fff; }
+    .share-copy { background: var(--gray-light); color: var(--text-body); border: 1px solid var(--border); }
+    .share-copy:hover { background: var(--navy); color: #fff; }
+
+    /* Related Articles */
+    .related-articles { margin-top: 48px; }
+    .related-articles h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; color: var(--text-main); padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+
+    /* ===== CATEGORY PAGE ===== */
+    .cat-page-header {
+      background: var(--navy);
+      padding: 40px 0;
+      margin-bottom: 36px;
+    }
+    .cat-page-header h1 { font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
+    .cat-page-header p { color: rgba(255,255,255,0.65); font-size: 0.95rem; max-width: 520px; }
+    .cat-page-header .cat-big-tag { background: var(--gold); color: var(--navy); font-family: var(--font-ui); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 5px 14px; border-radius: 4px; display: inline-block; margin-bottom: 14px; }
+
+    /* ===== CONTACT PAGE ===== */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin: 48px 0; }
+    .contact-form { background: var(--white); padding: 36px; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+    .contact-form h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; }
+    .contact-form p { color: var(--text-body); font-size: 0.9rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-family: var(--font-ui); font-size: 0.83rem; font-weight: 600; color: var(--text-body); margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      background: var(--off-white);
+      color: var(--text-main);
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); background: #fff; }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .contact-info h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 20px; }
+    .contact-info-item { display: flex; gap: 16px; margin-bottom: 24px; }
+    .contact-info-icon { width: 44px; height: 44px; background: var(--navy); color: var(--gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-info-text h4 { font-family: var(--font-ui); font-weight: 700; font-size: 0.9rem; margin-bottom: 3px; }
+    .contact-info-text p { font-size: 0.88rem; color: var(--text-body); }
+    .success-msg { display: none; background: #e6f4ea; border: 1px solid #1a7a4a; color: #1a7a4a; padding: 14px 18px; border-radius: 4px; font-family: var(--font-ui); font-size: 0.88rem; margin-top: 10px; }
+
+    /* ===== POLICY PAGES ===== */
+    .policy-content {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 48px 52px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+    .policy-content h1 { font-family: var(--font-display); font-size: 2rem; font-weight: 900; margin-bottom: 8px; }
+    .policy-content .last-updated { font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-muted); margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+    .policy-content h2 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin: 32px 0 12px; color: var(--navy); }
+    .policy-content p { font-size: 0.93rem; line-height: 1.78; color: var(--text-body); margin-bottom: 14px; }
+    .policy-content ul { margin: 10px 0 14px 24px; }
+    .policy-content ul li { font-size: 0.92rem; color: var(--text-body); margin-bottom: 6px; }
+    .policy-content a { color: var(--gold-dark); text-decoration: underline; }
+
+    /* ===== ABOUT PAGE ===== */
+    .about-hero { background: var(--navy); padding: 72px 0; text-align: center; margin-bottom: 48px; }
+    .about-hero h1 { font-family: var(--font-display); font-size: 2.6rem; font-weight: 900; color: var(--white); margin-bottom: 16px; }
+    .about-hero p { color: rgba(255,255,255,0.7); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+    .value-card { background: var(--white); padding: 28px 24px; border-radius: var(--radius-lg); box-shadow: var(--shadow); text-align: center; }
+    .value-card .icon { font-size: 2rem; margin-bottom: 14px; }
+    .value-card h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .value-card p { font-size: 0.87rem; color: var(--text-body); }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 32px 0; }
+    .team-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); text-align: center; padding-bottom: 20px; }
+    .team-card img { width: 100%; height: 180px; object-fit: cover; }
+    .team-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin: 14px 0 4px; }
+    .team-card p { font-size: 0.83rem; color: var(--text-muted); }
+
+    /* ===== PAGINATION ===== */
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin: 48px 0; flex-wrap: wrap; }
+    .page-btn {
+      font-family: var(--font-ui);
+      font-size: 0.87rem;
+      font-weight: 600;
+      padding: 9px 16px;
+      border-radius: 4px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .page-btn:hover, .page-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .page-btn.arrow { font-size: 1rem; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--navy); color: rgba(255,255,255,0.7); margin-top: 64px; }
+    .footer-ad { background: var(--navy-mid); padding: 14px 0; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; padding: 52px 20px 40px; }
+    .footer-brand .logo-text { font-size: 1.3rem; }
+    .footer-brand p { font-size: 0.86rem; line-height: 1.7; margin: 14px 0 20px; max-width: 300px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn { width: 36px; height: 36px; border-radius: 6px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; cursor: pointer; transition: background 0.2s; color: #fff; }
+    .social-btn:hover { background: var(--gold); color: var(--navy); }
+    .footer-col h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 18px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a, .footer-links button {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      padding: 0;
+    }
+    .footer-links a:hover, .footer-links button:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 22px 20px; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-family: var(--font-ui); font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links button { background: none; border: none; color: rgba(255,255,255,0.4); font-family: var(--font-ui); font-size: 0.78rem; cursor: pointer; transition: color 0.2s; }
+    .footer-bottom-links button:hover { color: var(--gold); }
+
+    /* ===== COOKIE BANNER ===== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--navy);
+      color: rgba(255,255,255,0.85);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      z-index: 9999;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.25);
+      font-family: var(--font-ui);
+      font-size: 0.87rem;
+    }
+    .cookie-banner p { max-width: 680px; }
+    .cookie-banner p a { color: var(--gold); text-decoration: underline; cursor: pointer; }
+    .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
+    .btn-accept { background: var(--gold); color: var(--navy); font-weight: 700; padding: 9px 20px; border-radius: 4px; cursor: pointer; border: none; font-family: var(--font-ui); }
+    .btn-decline { background: transparent; color: rgba(255,255,255,0.6); font-weight: 500; padding: 9px 14px; border-radius: 4px; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); font-family: var(--font-ui); }
+    .btn-decline:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+
+    /* ===== DISCLAIMER BANNER ===== */
+    .disclaimer-bar {
+      background: #fff8e7;
+      border-bottom: 1px solid #f0d882;
+      padding: 10px 20px;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: #7a6200;
+      text-align: center;
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-bar-wrap { max-width: 520px; margin: 0 auto 36px; position: relative; }
+    .search-bar-wrap input { width: 100%; padding: 14px 52px 14px 18px; border: 2px solid var(--border); border-radius: 6px; font-size: 0.95rem; outline: none; background: var(--white); }
+    .search-bar-wrap input:focus { border-color: var(--gold); }
+    .search-bar-wrap button { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text-muted); }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 52px 0; margin-bottom: 40px; position: relative; overflow: hidden; }
+    .page-hero::after { content: ''; position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,168,56,0.1) 0%, transparent 70%); }
+    .page-hero h1 { font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--white); margin-bottom: 10px; }
+    .page-hero p { color: rgba(255,255,255,0.65); font-size: 0.95rem; }
+
+    /* ===== CATEGORY FILTER TABS ===== */
+    .cat-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .cat-tab {
+      font-family: var(--font-ui);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .cat-tab:hover, .cat-tab.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* ===== BACK BUTTON ===== */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-ui);
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      margin-bottom: 24px;
+      cursor: pointer;
+      transition: gap 0.2s;
+    }
+    .back-btn:hover { gap: 10px; }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 44px; height: 44px;
+      background: var(--navy);
+      color: var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 500;
+      border: none;
+    }
+    .scroll-top.visible { opacity: 1; visibility: visible; }
+    .scroll-top:hover { background: var(--gold); color: var(--navy); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .layout-grid { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
     @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr 1fr; }
       nav { display: none; }
       .hamburger { display: flex; }
+      .mobile-menu { display: none; flex-direction: column; background: var(--navy-mid); padding: 16px; gap: 4px; }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu button { color: rgba(255,255,255,0.85); padding: 10px 14px; font-family: var(--font-ui); font-size: 0.92rem; text-align: left; border-radius: 4px; }
+      .mobile-menu button:hover { background: rgba(255,255,255,0.08); color: var(--gold); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .policy-content { padding: 28px 20px; }
+      .article-single-header h1 { font-size: 1.55rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .cookie-banner { flex-direction: column; align-items: flex-start; }
+      .top-bar { flex-direction: column; gap: 4px; text-align: center; }
+      .top-bar-right { justify-content: center; }
     }
-    @media (min-width: 769px) {
-      #mobileMenu { display: none !important; }
+    @media (max-width: 480px) {
+      .articles-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .hero-main h2 { font-size: 1.3rem; }
+      .page-hero h1 { font-size: 1.5rem; }
     }
-
-    /* Resto de estilos simplificados para el ejemplo */
-    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-    .page { display: none; }
-    .page.active { display: block; }
-    .hero-main { background: var(--navy); color: white; padding: 40px; border-radius: 12px; cursor: pointer; margin-bottom: 30px; }
-    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-    .article-card { background: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow); cursor: pointer; }
-    footer { background: var(--navy); color: white; padding: 40px 20px; margin-top: 50px; text-align: center; }
   </style>
 </head>
 <body>
 
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>🍪 We use cookies to improve your experience and to personalise ads. By clicking "Accept All", you consent to our use of cookies. Read our <a onclick="showPage('cookie-policy')">Cookie Policy</a> and <a onclick="showPage('privacy')">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="btn-decline" onclick="dismissCookies()">Decline</button>
+    <button class="btn-accept" onclick="acceptCookies()">Accept All</button>
+  </div>
+</div>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+  <span>📈 <strong>Smart money moves</strong> for everyday people in Europe &amp; the USA</span>
+  <div class="top-bar-right">
+    <a onclick="showPage('about')">About Us</a>
+    <a onclick="showPage('contact')">Contact</a>
+    <a onclick="showPage('privacy')">Privacy</a>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
 <header>
   <div class="header-inner">
     <div class="logo" onclick="showPage('home')">
       <div class="logo-icon">W</div>
       <div class="logo-text">Wealth<span>Edge</span></div>
     </div>
-    
     <nav id="mainNav">
-      <div class="nav-item"><span class="nav-link" onclick="showPage('home')">Home</span></div>
+      <div class="nav-item">
+        <span class="nav-link" onclick="showPage('home')">Home</span>
+      </div>
       <div class="nav-item">
         <span class="nav-link">Categories ▾</span>
         <div class="nav-dropdown">
-          <button onclick="showCategory('investing')">Investing</button>
-          <button onclick="showCategory('savings')">Savings</button>
-          <button onclick="showCategory('crypto')">Cryptocurrency</button>
-          <button onclick="showCategory('realestate')">Real Estate</button>
-          <button onclick="showCategory('retirement')">Retirement</button>
-          <button onclick="showCategory('personalfinance')">Personal Finance</button>
+          <button onclick="showCategory('investing')">📊 Investing</button>
+          <button onclick="showCategory('savings')">💰 Savings</button>
+          <button onclick="showCategory('crypto')">₿ Cryptocurrency</button>
+          <button onclick="showCategory('realestate')">🏠 Real Estate</button>
+          <button onclick="showCategory('retirement')">🧓 Retirement</button>
+          <button onclick="showCategory('personalfinance')">💳 Personal Finance</button>
         </div>
       </div>
-      <div class="nav-item"><span class="nav-link" onclick="showPage('articles')">All Articles</span></div>
-      <div class="nav-item"><span class="nav-link" onclick="showPage('about')">About</span></div>
-      <div class="nav-item"><span class="nav-link" onclick="showPage('contact')">Contact</span></div>
+      <div class="nav-item">
+        <span class="nav-link" onclick="showPage('articles')">All Articles</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link" onclick="showPage('about')">About</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link" onclick="showPage('contact')">Contact</span>
+      </div>
     </nav>
-
-    <div class="hamburger" onclick="toggleMobile()">
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()">
       <span></span><span></span><span></span>
     </div>
   </div>
-
-  <div id="mobileMenu">
+  <!-- Mobile Menu -->
+</header>
+<div class="mobile-menu" id="mobileMenu">
     <button onclick="showPage('home'); toggleMobile()">Home</button>
     <button onclick="showPage('articles'); toggleMobile()">All Articles</button>
     <button onclick="showCategory('investing'); toggleMobile()">Investing</button>
     <button onclick="showCategory('savings'); toggleMobile()">Savings</button>
     <button onclick="showCategory('crypto'); toggleMobile()">Cryptocurrency</button>
-    <button onclick="showPage('about'); toggleMobile()">About Us</button>
+    <button onclick="showCategory('realestate'); toggleMobile()">Real Estate</button>
+    <button onclick="showCategory('retirement'); toggleMobile()">Retirement</button>
+    <button onclick="showCategory('personalfinance'); toggleMobile()">Personal Finance</button>
+    <button onclick="showPage('about'); toggleMobile()">About</button>
     <button onclick="showPage('contact'); toggleMobile()">Contact</button>
-  </div>
-</header>
+</div>
+<!-- ===== TOP LEADERBOARD AD ===== -->
+<div class="ad-container">
+  <!-- AdSense Leaderboard 728x90 / Responsive -->
+  <!-- Replace this div with your AdSense code: -->
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXX" data-ad-slot="XXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+  <div class="ad-unit ad-leaderboard"></div>
+</div>
 
+<!-- ===== DISCLAIMER ===== -->
+<div class="disclaimer-bar">
+  ⚠️ <strong>Financial Disclaimer:</strong> Content on WealthEdge is for informational purposes only and does not constitute financial advice. Always consult a qualified financial advisor before making investment decisions.
+</div>
+
+<!-- ============================================================ -->
+<!--                       HOME PAGE                             -->
+<!-- ============================================================ -->
 <div id="page-home" class="page active">
   <div class="container">
-    <div class="hero-main" onclick="openArticle(0)">
-      <h1>ETFs vs Mutual Funds: Which Is Right for You?</h1>
-      <p>Latest update on smart investing strategies for 2026.</p>
-    </div>
-    <div class="articles-grid" id="homeArticlesGrid">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-main" onclick="openArticle(0)">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=500&fit=crop" alt="Investing Guide 2026" loading="eager" />
+        <div class="hero-main-overlay">
+          <span class="hero-cat-tag">Investing</span>
+          <h2>ETFs vs Mutual Funds: Which Is Right for You in 2026?</h2>
+          <p>Discover the key differences, fees, and returns — and which strategy wins for European and US investors.</p>
+          <div class="hero-meta">By Sarah Mitchell · Feb 14, 2026 · 8 min read</div>
+        </div>
       </div>
+      <div class="hero-stack">
+        <div class="hero-card" onclick="openArticle(1)">
+          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=300&h=200&fit=crop" alt="Emergency Fund" />
+          <div class="hero-card-body">
+            <span class="cat-tag cat-savings">Savings</span>
+            <h3>How to Build a 6-Month Emergency Fund (Step by Step)</h3>
+            <div class="meta">Feb 15, 2026 · 6 min read</div>
+          </div>
+        </div>
+        <div class="hero-card" onclick="openArticle(2)">
+          <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=300&h=200&fit=crop" alt="Bitcoin vs Gold" />
+          <div class="hero-card-body">
+            <span class="cat-tag cat-crypto">Crypto</span>
+            <h3>Bitcoin vs Gold: Where Should Your Money Go in 2026?</h3>
+            <div class="meta">Mar 8, 2026 · 7 min read</div>
+          </div>
+        </div>
+        <div class="hero-card" onclick="openArticle(6)">
+          <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=300&h=200&fit=crop" alt="Real Estate" />
+          <div class="hero-card-body">
+            <span class="cat-tag cat-realestate">Real Estate</span>
+            <h3>Real Estate Investing for Beginners in Europe: A 2026 Guide</h3>
+            <div class="meta">Mar 11, 2026 · 9 min read</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INLINE AD AFTER HERO -->
+    <div class="ad-container" style="margin: 0 -20px 0 -20px; padding: 14px 20px;">
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXX" data-ad-slot="XXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+      <div class="ad-unit ad-responsive"></div>
+    </div>
+
+    <!-- MAIN CONTENT + SIDEBAR -->
+    <div class="layout-grid" style="margin-top: 36px;">
+      <main>
+
+        <!-- Latest Articles -->
+        <div class="section-header">
+          <h2>Latest Articles</h2>
+          <button class="view-all-btn" onclick="showPage('articles')">View All →</button>
+        </div>
+        <div class="articles-grid" id="homeArticlesGrid">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- AD BETWEEN ARTICLES -->
+        <div class="ad-container" style="margin: 32px -20px; padding: 14px 20px;">
+          <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXX" data-ad-slot="XXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+          <div class="ad-unit ad-responsive"></div>
+        </div>
+
+        <!-- Investing Section -->
+        <div class="section-header">
+          <h2>Investing</h2>
+          <button class="view-all-btn" onclick="showCategory('investing')">See More →</button>
+        </div>
+        <div class="articles-grid articles-grid-2col" id="homeInvestingGrid">
+        </div>
+
+        <!-- AD BETWEEN SECTIONS -->
+        <div class="ad-unit ad-inline" style="margin: 36px 0;"></div>
+
+        <!-- Personal Finance Section -->
+        <div class="section-header">
+          <h2>Personal Finance</h2>
+          <button class="view-all-btn" onclick="showCategory('personalfinance')">See More →</button>
+        </div>
+        <div class="articles-grid articles-grid-2col" id="homePFGrid">
+        </div>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- Sidebar Ad 1: 300x250 -->
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-rectangle"></div>
+          <!-- <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-XXXXXX" data-ad-slot="XXXXXX"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Categories</div>
+          <div class="sidebar-widget-body">
+            <div class="sidebar-cat-list">
+              <div class="sidebar-cat-item" onclick="showCategory('investing')">📊 Investing <span class="sidebar-cat-count">5</span></div>
+              <div class="sidebar-cat-item" onclick="showCategory('savings')">💰 Savings <span class="sidebar-cat-count">3</span></div>
+              <div class="sidebar-cat-item" onclick="showCategory('crypto')">₿ Cryptocurrency <span class="sidebar-cat-count">3</span></div>
+              <div class="sidebar-cat-item" onclick="showCategory('realestate')">🏠 Real Estate <span class="sidebar-cat-count">2</span></div>
+              <div class="sidebar-cat-item" onclick="showCategory('retirement')">🧓 Retirement <span class="sidebar-cat-count">2</span></div>
+              <div class="sidebar-cat-item" onclick="showCategory('personalfinance')">💳 Personal Finance <span class="sidebar-cat-count">3</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Posts Widget -->
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Most Read</div>
+          <div class="sidebar-widget-body">
+            <div class="popular-list">
+              <div class="popular-item" onclick="openArticle(4)">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=150&h=100&fit=crop" alt="Compound Interest" />
+                <div class="popular-item-body">
+                  <h4>Compound Interest: The 8th Wonder of the World</h4>
+                  <div class="meta">📊 Investing · 5 min</div>
+                </div>
+              </div>
+              <div class="popular-item" onclick="openArticle(7)">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=150&h=100&fit=crop" alt="Debt Payoff" />
+                <div class="popular-item-body">
+                  <h4>Snowball vs Avalanche: How to Pay Off Debt Fast</h4>
+                  <div class="meta">💳 Personal Finance · 6 min</div>
+                </div>
+              </div>
+              <div class="popular-item" onclick="openArticle(10)">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=150&h=100&fit=crop" alt="Stock Market" />
+                <div class="popular-item-body">
+                  <h4>Stock Market Basics: A Complete Beginner's Guide</h4>
+                  <div class="meta">📊 Investing · 8 min</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Newsletter</div>
+          <div class="sidebar-widget-body">
+            <div class="newsletter-form">
+              <p>Get weekly money tips delivered to your inbox. No spam, ever.</p>
+              <input type="email" placeholder="your@email.com" id="sidebarEmail" />
+              <button class="btn-primary" onclick="subscribeNewsletter('sidebarEmail')">Subscribe Free →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Ad 2: 300x600 -->
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-halfpage"></div>
+          <!-- <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-XXXXXX" data-ad-slot="XXXXXX"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+        </div>
+
+        <!-- Tag Cloud -->
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Popular Tags</div>
+          <div class="sidebar-widget-body">
+            <div class="tag-cloud">
+              <span class="tag-item" onclick="showPage('articles')">ETF</span>
+              <span class="tag-item" onclick="showPage('articles')">Bitcoin</span>
+              <span class="tag-item" onclick="showPage('articles')">Savings</span>
+              <span class="tag-item" onclick="showPage('articles')">Dividends</span>
+              <span class="tag-item" onclick="showPage('articles')">401k</span>
+              <span class="tag-item" onclick="showPage('articles')">Budget</span>
+              <span class="tag-item" onclick="showPage('articles')">Inflation</span>
+              <span class="tag-item" onclick="showPage('articles')">FIRE</span>
+              <span class="tag-item" onclick="showPage('articles')">Crypto</span>
+              <span class="tag-item" onclick="showPage('articles')">Index Funds</span>
+              <span class="tag-item" onclick="showPage('articles')">Real Estate</span>
+              <span class="tag-item" onclick="showPage('articles')">Passive Income</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Crypto Row -->
+    <div class="section-header" style="margin-top: 48px;">
+      <h2>Cryptocurrency</h2>
+      <button class="view-all-btn" onclick="showCategory('crypto')">See More →</button>
+    </div>
+    <div class="articles-grid" id="homeCryptoGrid"></div>
+
   </div>
-</div>
+</div><!-- /page-home -->
 
+<!-- ============================================================ -->
+<!--                    ALL ARTICLES PAGE                        -->
+<!-- ============================================================ -->
 <div id="page-articles" class="page">
-    <div class="container"><h1>All Articles</h1><div class="articles-grid" id="allArticlesGrid"></div></div>
-</div>
+  <div class="page-hero">
+    <div class="container">
+      <h1>All Articles</h1>
+      <p>Browse all our guides, tips and analysis on personal finance and investing.</p>
+    </div>
+  </div>
+  <!-- AD -->
+  <div class="ad-container"><div class="ad-unit ad-leaderboard"></div></div>
+  <div class="container" style="margin-top: 32px;">
+    <div class="search-bar-wrap">
+      <input type="text" id="searchInput" placeholder="Search articles..." oninput="filterArticles()" />
+      <button onclick="filterArticles()">🔍</button>
+    </div>
+    <div class="cat-tabs" id="catTabs">
+      <button class="cat-tab active" onclick="filterByCategory('all', this)">All</button>
+      <button class="cat-tab" onclick="filterByCategory('investing', this)">📊 Investing</button>
+      <button class="cat-tab" onclick="filterByCategory('savings', this)">💰 Savings</button>
+      <button class="cat-tab" onclick="filterByCategory('crypto', this)">₿ Crypto</button>
+      <button class="cat-tab" onclick="filterByCategory('realestate', this)">🏠 Real Estate</button>
+      <button class="cat-tab" onclick="filterByCategory('retirement', this)">🧓 Retirement</button>
+      <button class="cat-tab" onclick="filterByCategory('personalfinance', this)">💳 Personal Finance</button>
+    </div>
+    <div class="layout-grid">
+      <main>
+        <div class="articles-grid articles-grid-2col" id="allArticlesGrid"></div>
+        <!-- AD between articles -->
+        <div class="ad-container" style="margin: 32px -20px; padding: 14px 20px;"><div class="ad-unit ad-responsive"></div></div>
+        <div class="pagination" id="allArticlesPagination">
+          <button class="page-btn arrow" onclick="changePage(-1)">← Prev</button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn" onclick="changePage(1)">2</button>
+          <button class="page-btn arrow" onclick="changePage(1)">Next →</button>
+        </div>
+      </main>
+      <aside class="sidebar">
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-rectangle"></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Categories</div>
+          <div class="sidebar-widget-body">
+            <div class="sidebar-cat-list">
+              <div class="sidebar-cat-item" onclick="filterByCategory('investing', document.querySelector('.cat-tab'))">📊 Investing <span class="sidebar-cat-count">5</span></div>
+              <div class="sidebar-cat-item" onclick="filterByCategory('savings', document.querySelector('.cat-tab'))">💰 Savings <span class="sidebar-cat-count">3</span></div>
+              <div class="sidebar-cat-item" onclick="filterByCategory('crypto', document.querySelector('.cat-tab'))">₿ Crypto <span class="sidebar-cat-count">3</span></div>
+              <div class="sidebar-cat-item" onclick="filterByCategory('realestate', document.querySelector('.cat-tab'))">🏠 Real Estate <span class="sidebar-cat-count">2</span></div>
+              <div class="sidebar-cat-item" onclick="filterByCategory('retirement', document.querySelector('.cat-tab'))">🧓 Retirement <span class="sidebar-cat-count">2</span></div>
+              <div class="sidebar-cat-item" onclick="filterByCategory('personalfinance', document.querySelector('.cat-tab'))">💳 Personal Finance <span class="sidebar-cat-count">3</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Newsletter</div>
+          <div class="sidebar-widget-body">
+            <div class="newsletter-form">
+              <p>Get weekly money tips in your inbox.</p>
+              <input type="email" placeholder="your@email.com" id="articlesEmail" />
+              <button class="btn-primary" onclick="subscribeNewsletter('articlesEmail')">Subscribe Free →</button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-halfpage"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div><!-- /page-articles -->
 
+<!-- ============================================================ -->
+<!--                   SINGLE ARTICLE PAGE                       -->
+<!-- ============================================================ -->
+<div id="page-article" class="page">
+  <div class="container">
+    <div class="layout-grid" style="margin-top: 32px;">
+      <article class="article-single">
+        <button class="back-btn" onclick="goBack()">← Back to Articles</button>
+        <div class="article-single-header">
+          <span class="cat-tag" id="articleCatTag"></span>
+          <h1 id="articleTitle"></h1>
+          <div class="article-single-meta">
+            <span>✍️ By <span class="author" id="articleAuthor"></span></span>
+            <span id="articleDate"></span>
+            <span id="articleReadTime"></span>
+          </div>
+        </div>
+        <!-- IN-ARTICLE AD TOP -->
+        <div class="ad-container" style="margin: 0 0 24px; padding: 12px 0;"><div class="ad-unit ad-responsive"></div></div>
+        <img class="article-hero-img" id="articleImg" src="" alt="" />
+        <div class="article-content" id="articleContent"></div>
+        <!-- IN-ARTICLE AD BOTTOM -->
+        <div class="ad-container" style="margin: 28px 0; padding: 12px 0;"><div class="ad-unit ad-responsive"></div></div>
+        <div class="article-tags">
+          <h4>Tags</h4>
+          <div class="tag-cloud" id="articleTags"></div>
+        </div>
+        <div class="share-bar">
+          <span>Share this article:</span>
+          <button class="share-btn share-twitter" onclick="shareArticle('twitter')">🐦 Twitter</button>
+          <button class="share-btn share-facebook" onclick="shareArticle('facebook')">📘 Facebook</button>
+          <button class="share-btn share-linkedin" onclick="shareArticle('linkedin')">💼 LinkedIn</button>
+          <button class="share-btn share-copy" onclick="copyLink()">🔗 Copy Link</button>
+        </div>
+        <div class="related-articles">
+          <h3>Related Articles</h3>
+          <div class="articles-grid articles-grid-2col" id="relatedArticlesGrid"></div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-rectangle"></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Newsletter</div>
+          <div class="sidebar-widget-body">
+            <div class="newsletter-form">
+              <p>Get weekly money tips in your inbox.</p>
+              <input type="email" placeholder="your@email.com" id="articleEmail" />
+              <button class="btn-primary" onclick="subscribeNewsletter('articleEmail')">Subscribe →</button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Popular Tags</div>
+          <div class="sidebar-widget-body">
+            <div class="tag-cloud">
+              <span class="tag-item" onclick="showPage('articles')">ETF</span>
+              <span class="tag-item" onclick="showPage('articles')">Bitcoin</span>
+              <span class="tag-item" onclick="showPage('articles')">Budget</span>
+              <span class="tag-item" onclick="showPage('articles')">FIRE</span>
+              <span class="tag-item" onclick="showPage('articles')">Dividends</span>
+              <span class="tag-item" onclick="showPage('articles')">Inflation</span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-halfpage"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div><!-- /page-article -->
+
+<!-- ============================================================ -->
+<!--                    CATEGORY PAGE                            -->
+<!-- ============================================================ -->
+<div id="page-category" class="page">
+  <div class="cat-page-header">
+    <div class="container">
+      <div class="cat-big-tag" id="catPageTag"></div>
+      <h1 id="catPageTitle"></h1>
+      <p id="catPageDesc"></p>
+    </div>
+  </div>
+  <div class="ad-container"><div class="ad-unit ad-leaderboard"></div></div>
+  <div class="container" style="margin-top: 32px;">
+    <div class="layout-grid">
+      <main>
+        <div class="articles-grid articles-grid-2col" id="catArticlesGrid"></div>
+        <div class="ad-container" style="margin: 32px -20px; padding: 14px 20px;"><div class="ad-unit ad-responsive"></div></div>
+      </main>
+      <aside class="sidebar">
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-rectangle"></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">Other Categories</div>
+          <div class="sidebar-widget-body">
+            <div class="sidebar-cat-list">
+              <div class="sidebar-cat-item" onclick="showCategory('investing')">📊 Investing</div>
+              <div class="sidebar-cat-item" onclick="showCategory('savings')">💰 Savings</div>
+              <div class="sidebar-cat-item" onclick="showCategory('crypto')">₿ Crypto</div>
+              <div class="sidebar-cat-item" onclick="showCategory('realestate')">🏠 Real Estate</div>
+              <div class="sidebar-cat-item" onclick="showCategory('retirement')">🧓 Retirement</div>
+              <div class="sidebar-cat-item" onclick="showCategory('personalfinance')">💳 Personal Finance</div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget" style="overflow:visible; background:transparent; box-shadow:none;">
+          <div class="ad-unit ad-halfpage"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div><!-- /page-category -->
+
+<!-- ============================================================ -->
+<!--                      ABOUT PAGE                             -->
+<!-- ============================================================ -->
 <div id="page-about" class="page">
-    <div class="container"><h1>About Us</h1><p>Welcome to WealthEdge. We provide practical financial advice.</p></div>
-</div>
+  <div class="about-hero">
+    <div class="container">
+      <h1>About WealthEdge</h1>
+      <p>We believe everyone deserves access to high-quality financial education — regardless of their background or income level.</p>
+    </div>
+  </div>
+  <div class="ad-container"><div class="ad-unit ad-leaderboard"></div></div>
+  <div class="container">
+    <div style="max-width: 800px; margin: 0 auto 40px; text-align: center;">
+      <h2 style="font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; margin-bottom: 16px;">Our Mission</h2>
+      <p style="font-size: 1rem; line-height: 1.8; color: var(--text-body);">WealthEdge was founded in 2026 with a simple goal: to cut through the noise and deliver practical, unbiased personal finance content for people in Europe and the United States. Whether you're saving your first €1,000 or building a multi-asset investment portfolio, our guides are designed to meet you where you are.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="icon">📚</div>
+        <h3>Education First</h3>
+        <p>We prioritise clarity and accuracy. Every article is thoroughly researched and reviewed before publication.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">🔒</div>
+        <h3>Independence</h3>
+        <p>We are not paid to recommend specific products. Our editorial opinions are 100% independent.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">🌍</div>
+        <h3>Global Perspective</h3>
+        <p>Our content covers both European and US financial markets, regulations and best practices.</p>
+      </div>
+    </div>
+    <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin: 48px 0 24px; text-align:center;">Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=180&fit=crop&face" alt="Sarah Mitchell" />
+        <h3>Sarah Mitchell</h3>
+        <p>Editor-in-Chief · Investing</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=180&fit=crop&face" alt="James Hartley" />
+        <h3>James Hartley</h3>
+        <p>Senior Writer · Personal Finance</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=180&fit=crop&face" alt="Elena Kovach" />
+        <h3>Elena Kovach</h3>
+        <p>Crypto & DeFi Analyst</p>
+      </div>
+    </div>
+    <div class="ad-unit ad-inline"></div>
+  </div>
+</div><!-- /page-about -->
 
+<!-- ============================================================ -->
+<!--                     CONTACT PAGE                            -->
+<!-- ============================================================ -->
 <div id="page-contact" class="page">
-    <div class="container"><h1>Contact</h1><p>Email: hello@wealthedge.blog</p></div>
-</div>
+  <div class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Have a question, feedback or partnership enquiry? We'd love to hear from you.</p>
+    </div>
+  </div>
+  <div class="ad-container"><div class="ad-unit ad-leaderboard"></div></div>
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <p>We typically respond within 1–2 business days.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactName">Full Name *</label>
+            <input type="text" id="contactName" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email Address *</label>
+            <input type="email" id="contactEmail" placeholder="john@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactSubject">Subject</label>
+          <select id="contactSubject">
+            <option value="">Select a topic...</option>
+            <option>General Enquiry</option>
+            <option>Editorial / Content</option>
+            <option>Advertising / Partnership</option>
+            <option>Technical Issue</option>
+            <option>Privacy / Data</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Message *</label>
+          <textarea id="contactMessage" placeholder="Write your message here..." rows="5"></textarea>
+        </div>
+        <div class="form-group" style="display:flex; align-items:flex-start; gap:10px;">
+          <input type="checkbox" id="contactPrivacy" style="width:auto; margin-top:3px;" />
+          <label for="contactPrivacy" style="font-weight:400; font-size:0.83rem; color:var(--text-body);">I agree to the <a onclick="showPage('privacy')" style="color:var(--gold-dark);cursor:pointer;">Privacy Policy</a> and consent to my data being used to respond to this enquiry.</label>
+        </div>
+        <button class="btn-primary" onclick="submitContact()" style="width:100%; padding:14px;">Send Message →</button>
+        <div class="success-msg" id="contactSuccess">✅ Thank you! Your message has been sent. We'll get back to you within 1–2 business days.</div>
+      </div>
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📧</div>
+          <div class="contact-info-text">
+            <h4>Email</h4>
+            <p>hello@wealthedge.blog<br />editorial@wealthedge.blog</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🌍</div>
+          <div class="contact-info-text">
+            <h4>Coverage</h4>
+            <p>Europe & United States<br />English language content</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">⏰</div>
+          <div class="contact-info-text">
+            <h4>Response Time</h4>
+            <p>Mon–Fri: 1–2 business days<br />Weekends: may be delayed</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📢</div>
+          <div class="contact-info-text">
+            <h4>Advertising & Partnerships</h4>
+            <p>For media kits and advertising enquiries, please email <strong>ads@wealthedge.blog</strong>.</p>
+          </div>
+        </div>
+        <div style="margin-top: 32px;">
+          <div class="ad-unit ad-rectangle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-contact -->
 
+<!-- ============================================================ -->
+<!--                   PRIVACY POLICY PAGE                       -->
+<!-- ============================================================ -->
+<div id="page-privacy" class="page">
+  <div class="container" style="padding: 48px 20px;">
+    <div class="policy-content">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: 1 January 2026</p>
+      <p>WealthEdge ("we", "us", or "our") operates the website <strong>wealthedge.blog</strong>. We are committed to protecting your privacy in accordance with the EU General Data Protection Regulation (GDPR) and applicable US privacy laws.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>We may collect the following types of personal information when you use our website:</p>
+      <ul>
+        <li><strong>Contact information:</strong> Name and email address when you submit our contact form or newsletter subscription.</li>
+        <li><strong>Usage data:</strong> IP address, browser type, pages visited, time spent on pages, referring URLs, and device information — collected automatically via analytics tools.</li>
+        <li><strong>Cookies:</strong> Small text files stored on your device that help us deliver personalised content and advertisements. See our <a onclick="showPage('cookie-policy')">Cookie Policy</a> for details.</li>
+      </ul>
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We use the personal data we collect for the following purposes:</p>
+      <ul>
+        <li>To respond to your enquiries and provide customer support.</li>
+        <li>To send you our newsletter (only with your explicit consent).</li>
+        <li>To analyse website traffic and improve our content.</li>
+        <li>To display personalised advertisements through Google AdSense and similar partners.</li>
+        <li>To comply with legal obligations.</li>
+      </ul>
+
+      <h2>3. Legal Basis for Processing (GDPR)</h2>
+      <p>For users in the European Economic Area, we process your data on the following legal bases: <strong>Consent</strong> (for newsletters and non-essential cookies), <strong>Legitimate Interests</strong> (for analytics and security), and <strong>Legal Obligation</strong> (for compliance purposes).</p>
+
+      <h2>4. Google AdSense & Third-Party Advertising</h2>
+      <p>We use Google AdSense to display advertisements on our website. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>. We also participate in the IAB Transparency and Consent Framework.</p>
+
+      <h2>5. Cookies</h2>
+      <p>We use essential, analytics and advertising cookies. By using our site with cookies enabled, you consent to their use. You can manage your cookie preferences at any time. See our <a onclick="showPage('cookie-policy')">Cookie Policy</a>.</p>
+
+      <h2>6. Data Sharing</h2>
+      <p>We do not sell your personal data. We may share data with trusted third parties including Google Analytics, Google AdSense, Mailchimp (newsletter), and our hosting provider — all under data processing agreements. These partners may be located in the USA; where applicable, transfers are covered by Standard Contractual Clauses.</p>
+
+      <h2>7. Data Retention</h2>
+      <p>We retain personal data for as long as necessary to fulfil the purposes outlined in this policy. Contact form data is deleted after 12 months. Newsletter subscriber data is held until you unsubscribe.</p>
+
+      <h2>8. Your Rights</h2>
+      <p>If you are in the EU/EEA or UK, you have the right to: access, correct, or delete your personal data; object to or restrict processing; data portability; and to withdraw consent at any time. To exercise your rights, contact us at <strong>privacy@wealthedge.blog</strong>.</p>
+
+      <h2>9. Children's Privacy</h2>
+      <p>Our website is not directed at children under 16. We do not knowingly collect personal data from minors. If you believe a minor has provided us with personal data, please contact us immediately.</p>
+
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically. We will notify you of significant changes by posting a notice on our website. Continued use of WealthEdge after changes constitutes your acceptance of the updated policy.</p>
+
+      <h2>11. Contact</h2>
+      <p>For any privacy-related questions, please contact us at <strong>privacy@wealthedge.blog</strong> or use our <a onclick="showPage('contact')">contact form</a>.</p>
+    </div>
+  </div>
+</div><!-- /page-privacy -->
+
+<!-- ============================================================ -->
+<!--                     TERMS OF SERVICE                        -->
+<!-- ============================================================ -->
+<div id="page-terms" class="page">
+  <div class="container" style="padding: 48px 20px;">
+    <div class="policy-content">
+      <h1>Terms of Service</h1>
+      <p class="last-updated">Last updated: 1 January 2026</p>
+      <p>Please read these Terms of Service ("Terms") carefully before using WealthEdge ("the Site"). By accessing or using WealthEdge, you agree to be bound by these Terms.</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By using WealthEdge, you confirm that you are at least 18 years of age and agree to these Terms and our Privacy Policy. If you do not agree, please do not use this website.</p>
+
+      <h2>2. Nature of Content — No Financial Advice</h2>
+      <p>All content published on WealthEdge is intended for <strong>informational and educational purposes only</strong>. Nothing on this website constitutes financial, investment, legal, or tax advice. We strongly recommend consulting a qualified and authorised financial adviser before making any investment decisions. Past performance is not indicative of future results.</p>
+
+      <h2>3. Intellectual Property</h2>
+      <p>All content on WealthEdge — including articles, graphics, logos, and code — is the property of WealthEdge and is protected by applicable copyright law. You may not reproduce, redistribute, or create derivative works without prior written permission.</p>
+
+      <h2>4. User Conduct</h2>
+      <p>You agree not to use WealthEdge to: violate any laws; transmit harmful or misleading content; attempt to gain unauthorised access to our systems; or scrape or harvest content without permission.</p>
+
+      <h2>5. Third-Party Links and Advertisements</h2>
+      <p>Our website contains links to third-party sites and displays advertisements through Google AdSense and other networks. We are not responsible for the content, accuracy, or privacy practices of external sites. Clicking on advertisements is at your own discretion.</p>
+
+      <h2>6. Disclaimers and Limitation of Liability</h2>
+      <p>WealthEdge is provided "as is" without warranties of any kind. To the fullest extent permitted by law, WealthEdge shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Site or reliance on its content.</p>
+
+      <h2>7. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of England and Wales. For users in the European Union, applicable EU consumer rights laws shall prevail.</p>
+
+      <h2>8. Changes to Terms</h2>
+      <p>We reserve the right to update these Terms at any time. Continued use of the Site after changes constitutes acceptance of the revised Terms.</p>
+
+      <h2>9. Contact</h2>
+      <p>For questions about these Terms, contact us at <strong>legal@wealthedge.blog</strong>.</p>
+    </div>
+  </div>
+</div><!-- /page-terms -->
+
+<!-- ============================================================ -->
+<!--                     COOKIE POLICY                           -->
+<!-- ============================================================ -->
+<div id="page-cookie-policy" class="page">
+  <div class="container" style="padding: 48px 20px;">
+    <div class="policy-content">
+      <h1>Cookie Policy</h1>
+      <p class="last-updated">Last updated: 1 January 2026</p>
+      <p>This Cookie Policy explains what cookies are, how WealthEdge uses them, and how you can control your cookie preferences.</p>
+
+      <h2>1. What Are Cookies?</h2>
+      <p>Cookies are small text files placed on your device when you visit a website. They help the site remember your preferences and allow us to analyse how the site is used and serve relevant advertisements.</p>
+
+      <h2>2. Cookies We Use</h2>
+      <ul>
+        <li><strong>Essential cookies:</strong> Required for the website to function properly (e.g. session management, security). Cannot be disabled.</li>
+        <li><strong>Analytics cookies:</strong> We use Google Analytics to understand how visitors interact with our site. Data is anonymised and aggregated.</li>
+        <li><strong>Advertising cookies:</strong> We use Google AdSense, which places cookies to serve personalised advertisements based on your browsing history. These are third-party cookies managed by Google.</li>
+        <li><strong>Preference cookies:</strong> Remember your settings (e.g. cookie consent status, newsletter preferences).</li>
+      </ul>
+
+      <h2>3. Google AdSense &amp; DoubleClick</h2>
+      <p>Google AdSense uses the DoubleClick cookie to serve more relevant ads. You can opt out of personalised ads at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a> or via the <a href="https://optout.aboutads.info" target="_blank" rel="noopener">Digital Advertising Alliance</a> opt-out portal.</p>
+
+      <h2>4. Managing Your Cookie Preferences</h2>
+      <p>You can control cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Note that disabling cookies may affect the functionality of our website. You may also use our cookie consent banner to set your preferences.</p>
+
+      <h2>5. Third-Party Cookies</h2>
+      <p>Some cookies are placed by third parties including Google, social media platforms, and analytics providers. We do not control these cookies. Please refer to the relevant third party's privacy and cookie policies.</p>
+
+      <h2>6. Changes to This Policy</h2>
+      <p>We may update this Cookie Policy from time to time. We will display a notice on our site if significant changes are made.</p>
+
+      <h2>7. Contact</h2>
+      <p>If you have questions about our use of cookies, please contact us at <strong>privacy@wealthedge.blog</strong>.</p>
+    </div>
+  </div>
+</div><!-- /page-cookie-policy -->
+
+<!-- ============================================================ -->
+<!--                      DISCLAIMER PAGE                        -->
+<!-- ============================================================ -->
+<div id="page-disclaimer" class="page">
+  <div class="container" style="padding: 48px 20px;">
+    <div class="policy-content">
+      <h1>Disclaimer</h1>
+      <p class="last-updated">Last updated: 1 January 2026</p>
+      <p>The information published on WealthEdge is provided for general informational and educational purposes only. It is not intended to be and should not be taken as financial, investment, legal, tax, or professional advice of any kind.</p>
+      <h2>No Financial Advice</h2>
+      <p>WealthEdge does not hold any financial services licence or authorisation. We are not registered investment advisers, brokers, or financial planners. Nothing on this website should be construed as a recommendation to buy, sell, or hold any financial instrument or product. Always seek independent professional advice tailored to your personal circumstances before making any financial decisions.</p>
+      <h2>Accuracy of Information</h2>
+      <p>While we strive to ensure that all information on WealthEdge is accurate and up-to-date, we make no warranties regarding the completeness, accuracy, or reliability of any content. Financial markets and regulations change frequently; always verify information independently before acting on it.</p>
+      <h2>External Links</h2>
+      <p>Our website may contain links to external websites, products, or services. WealthEdge is not responsible for the content, accuracy, or practices of any external site. The inclusion of a link does not imply endorsement.</p>
+      <h2>Limitation of Liability</h2>
+      <p>WealthEdge and its contributors shall not be liable for any loss or damage — direct, indirect, incidental, or consequential — arising from your use of or reliance on information published on this site.</p>
+      <h2>Affiliate Disclosure</h2>
+      <p>Some articles on WealthEdge may contain affiliate links. If you click a link and make a purchase, we may receive a commission at no additional cost to you. This does not influence our editorial independence or recommendations.</p>
+    </div>
+  </div>
+</div><!-- /page-disclaimer -->
+
+<!-- ============================================================ -->
+<!--                        FOOTER                               -->
+<!-- ============================================================ -->
 <footer>
-  <p>© 2026 WealthEdge. All rights reserved.</p>
+  <!-- Footer Ad -->
+  <div class="footer-ad">
+    <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXX" data-ad-slot="XXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+    <div class="ad-unit" style="height:90px; max-width:728px; margin:0 auto; color:rgba(255,255,255,0.3); border-color:rgba(255,255,255,0.1); background: rgba(255,255,255,0.03);"></div>
+  </div>
+
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" onclick="showPage('home')" style="margin-bottom: 12px;">
+        <div class="logo-icon">W</div>
+        <div class="logo-text">Wealth<span>Edge</span></div>
+      </div>
+      <p>Practical personal finance, investing and money strategies for everyday people in Europe and the USA. Empowering smarter financial decisions since 2026.</p>
+      <div class="footer-social">
+        <button class="social-btn" title="Twitter" onclick="window.open('#','_blank')">𝕏</button>
+        <button class="social-btn" title="Facebook" onclick="window.open('#','_blank')">f</button>
+        <button class="social-btn" title="LinkedIn" onclick="window.open('#','_blank')">in</button>
+        <button class="social-btn" title="Instagram" onclick="window.open('#','_blank')">📷</button>
+        <button class="social-btn" title="RSS Feed" onclick="window.open('#','_blank')">📡</button>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <div class="footer-links">
+        <button onclick="showCategory('investing')">📊 Investing</button>
+        <button onclick="showCategory('savings')">💰 Savings</button>
+        <button onclick="showCategory('crypto')">₿ Cryptocurrency</button>
+        <button onclick="showCategory('realestate')">🏠 Real Estate</button>
+        <button onclick="showCategory('retirement')">🧓 Retirement</button>
+        <button onclick="showCategory('personalfinance')">💳 Personal Finance</button>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <div class="footer-links">
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('articles')">All Articles</button>
+        <button onclick="showPage('about')">About Us</button>
+        <button onclick="showPage('contact')">Contact</button>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <div class="footer-links">
+        <button onclick="showPage('privacy')">Privacy Policy</button>
+        <button onclick="showPage('terms')">Terms of Service</button>
+        <button onclick="showPage('cookie-policy')">Cookie Policy</button>
+        <button onclick="showPage('disclaimer')">Disclaimer</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom" style="padding-bottom: 28px;">
+    <div>
+      <p>© 2026 WealthEdge. All rights reserved. | Financial content is for informational purposes only — not financial advice.</p>
+    </div>
+    <div class="footer-bottom-links">
+      <button onclick="showPage('privacy')">Privacy</button>
+      <button onclick="showPage('terms')">Terms</button>
+      <button onclick="showPage('cookie-policy')">Cookies</button>
+      <button onclick="showPage('disclaimer')">Disclaimer</button>
+      <button onclick="showPage('contact')">Contact</button>
+    </div>
+  </div>
 </footer>
 
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ============================================================ -->
+<!--                     JAVASCRIPT                              -->
+<!-- ============================================================ -->
 <script>
-/* ===== LÓGICA DE NAVEGACIÓN ===== */
+function toggleMobile() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu) {
+        menu.classList.toggle('active');
+    }
+}
+/* ===== DATA: ARTICLES ===== */
+const articles = [
+  {
+    id: 0,
+    title: "ETFs vs Mutual Funds: Which Is Right for You in 2026?",
+    category: "investing",
+    catLabel: "Investing",
+    catClass: "cat-investing",
+    author: "Sarah Mitchell",
+    date: "Mar 14, 2026",
+    readTime: "8 min read",
+    img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=450&fit=crop",
+    excerpt: "Discover the key differences between ETFs and mutual funds, including fees, tax efficiency and performance — and find out which strategy makes sense for European and American investors.",
+    tags: ["ETF", "Mutual Funds", "Investing", "Portfolio"],
+    content: `
+      <p>When it comes to building a long-term investment portfolio, two of the most popular vehicles are <strong>Exchange-Traded Funds (ETFs)</strong> and <strong>Mutual Funds</strong>. Both offer instant diversification, but they differ significantly in structure, cost, and tax efficiency.</p>
+      <h2>What Is an ETF?</h2>
+      <p>An ETF is a basket of securities — stocks, bonds, commodities — that trades on a stock exchange just like an ordinary share. When you buy an ETF, you buy a single unit that gives you exposure to all the assets within it. ETFs are predominantly <em>passively managed</em>, meaning they simply track an index like the S&P 500 or the MSCI World.</p>
+      <h2>What Is a Mutual Fund?</h2>
+      <p>A mutual fund pools money from many investors to purchase a portfolio of assets. Unlike ETFs, mutual funds are priced once per day after the market closes. Many mutual funds are <em>actively managed</em>, with a fund manager making investment decisions in an attempt to beat the market.</p>
+      <h2>Key Differences</h2>
+      <ul>
+        <li><strong>Cost:</strong> ETFs typically have lower expense ratios (often 0.03–0.20%) compared to actively managed mutual funds (0.5–1.5% or more).</li>
+        <li><strong>Trading:</strong> ETFs trade throughout the day; mutual funds settle once daily.</li>
+        <li><strong>Minimum investment:</strong> ETFs can be bought for the price of a single share; mutual funds often require €500–€1,000 minimums.</li>
+        <li><strong>Tax efficiency:</strong> ETFs are generally more tax-efficient in the US due to the in-kind creation/redemption mechanism.</li>
+      </ul>
+      <h2>Which Should You Choose?</h2>
+      <p>For most individual investors — particularly those just starting out in Europe or the USA — a low-cost, diversified ETF is an excellent starting point. Products like the Vanguard FTSE All-World ETF (VWRL) or iShares Core MSCI World ETF give you exposure to thousands of companies worldwide for a fraction of a percent per year.</p>
+      <blockquote>"The stock market is a device for transferring money from the impatient to the patient." — Warren Buffett</blockquote>
+      <h2>Our Verdict</h2>
+      <p>Unless you have a strong conviction that an active manager can consistently outperform the index (evidence suggests most cannot, especially after fees), ETFs are the smarter choice for the vast majority of long-term investors. Start early, invest regularly, and let compound growth work in your favour.</p>
+    `
+  },
+  {
+    id: 1,
+    title: "How to Build a 6-Month Emergency Fund (Step by Step)",
+    category: "savings",
+    catLabel: "Savings",
+    catClass: "cat-savings",
+    author: "James Hartley",
+    date: "Feb 10, 2026",
+    readTime: "6 min read",
+    img: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=450&fit=crop",
+    excerpt: "An emergency fund is the foundation of any solid financial plan. Here's how to calculate how much you need and build it fast, even on a tight budget.",
+    tags: ["Emergency Fund", "Savings", "Budget", "Financial Security"],
+    content: `
+      <p>An emergency fund is money set aside specifically for unexpected expenses — a job loss, medical bill, car breakdown, or urgent home repair. Without one, these events can push you into debt. <strong>Financial experts universally recommend having 3 to 6 months of living expenses saved and easily accessible.</strong></p>
+      <h2>Step 1: Calculate Your Monthly Expenses</h2>
+      <p>Add up all essential monthly costs: rent/mortgage, food, utilities, insurance, transport, and minimum debt payments. This is your baseline. If your monthly essentials total £2,000, your target is £12,000 for a 6-month fund.</p>
+      <h2>Step 2: Open a Dedicated Account</h2>
+      <p>Keep your emergency fund <em>separate</em> from your current account to reduce the temptation to spend it. Use a high-yield savings account (HYSA) so your money earns interest while sitting idle. In Europe, platforms like Trade Republic and Revolut currently offer competitive rates.</p>
+      <h2>Step 3: Set a Monthly Savings Target</h2>
+      <p>Work out how long you'd like to take to reach your goal. Saving £500/month gets you to £12,000 in 24 months. Automate the transfer on payday so it happens before you have a chance to spend the money.</p>
+      <h2>Step 4: Find Extra Money to Save Faster</h2>
+      <ul>
+        <li>Cancel subscriptions you rarely use.</li>
+        <li>Cook at home 4–5 extra days per week.</li>
+        <li>Sell unused items on eBay, Vinted, or Facebook Marketplace.</li>
+        <li>Direct any bonuses or tax refunds straight into the fund.</li>
+      </ul>
+      <h2>Step 5: Protect It</h2>
+      <p>Only use the emergency fund for genuine emergencies. A holiday or new phone does not count. Once you dip into it, make replenishing it a top priority before resuming other savings goals.</p>
+      <blockquote>"Do not save what is left after spending; instead, spend what is left after saving." — Warren Buffett</blockquote>
+      <p>Building an emergency fund takes patience, but it is the single most important financial step you can take to protect yourself from life's inevitable surprises.</p>
+    `
+  },
+  {
+    id: 2,
+    title: "Bitcoin vs Gold: Where Should Your Money Go in 2026?",
+    category: "crypto",
+    catLabel: "Cryptocurrency",
+    catClass: "cat-crypto",
+    author: "Elena Kovach",
+    date: "Jan 8, 2026",
+    readTime: "7 min read",
+    img: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&h=450&fit=crop",
+    excerpt: "Bitcoin and gold are both touted as safe-haven assets and inflation hedges. But which has performed better, and how much (if any) should be in your portfolio?",
+    tags: ["Bitcoin", "Gold", "Crypto", "Inflation Hedge", "Portfolio"],
+    content: `
+      <p>In an era of persistent inflation and geopolitical uncertainty, investors worldwide are asking the same question: <strong>Is Bitcoin the new gold, or is physical gold still king?</strong></p>
+      <h2>The Case for Gold</h2>
+      <p>Gold has been a store of value for over 5,000 years. It is universally recognised, has industrial uses, and is relatively stable compared to equities. Central banks hold it as a reserve asset. In times of crisis, gold has historically maintained or increased its value — it surged during the 2008 financial crisis and the COVID-19 pandemic.</p>
+      <h2>The Case for Bitcoin</h2>
+      <p>Bitcoin was designed as a digital alternative to gold — scarce (capped at 21 million coins), decentralised, and censorship-resistant. Since its creation in 2009, Bitcoin has dramatically outperformed gold in terms of total return. Its increasing institutional adoption — with major asset managers now offering Bitcoin ETFs in the USA and Europe — lends it greater credibility.</p>
+      <h2>Risk Comparison</h2>
+      <ul>
+        <li><strong>Volatility:</strong> Bitcoin can move 10–20% in a single day. Gold rarely moves more than 1–2%.</li>
+        <li><strong>Track record:</strong> Gold has millennia; Bitcoin has 15 years.</li>
+        <li><strong>Regulation:</strong> Bitcoin faces regulatory uncertainty in several jurisdictions.</li>
+        <li><strong>Returns:</strong> Bitcoin has historically delivered far higher returns, alongside far higher drawdowns.</li>
+      </ul>
+      <h2>Our Recommendation</h2>
+      <p>Most financial advisers suggest that conservative investors allocate up to 5–10% of a portfolio to alternative assets like gold or Bitcoin as a hedge. If you are younger with a long investment horizon, a small Bitcoin allocation (1–5%) alongside a gold allocation (5%) could make sense. Never invest more in either than you can afford to lose in Bitcoin's case.</p>
+    `
+  },
+  {
+    id: 3,
+    title: "How to Retire Early: The FIRE Movement Explained",
+    category: "retirement",
+    catLabel: "Retirement",
+    catClass: "cat-retirement",
+    author: "Sarah Mitchell",
+    date: "Apr 3, 2026",
+    readTime: "9 min read",
+    img: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=800&h=450&fit=crop",
+    excerpt: "Financial Independence, Retire Early (FIRE) is a movement that has captivated thousands of Europeans and Americans. Here's how it works and whether it's achievable for you.",
+    tags: ["FIRE", "Early Retirement", "Financial Independence", "Savings Rate"],
+    content: `
+      <p>FIRE stands for <strong>Financial Independence, Retire Early</strong>. The core idea is simple: save and invest aggressively — often 50–70% of your income — so that your investment portfolio can sustain your living expenses indefinitely, allowing you to retire decades before the traditional age of 65.</p>
+      <h2>The 4% Rule</h2>
+      <p>The cornerstone of the FIRE movement is the 4% rule (also called the Safe Withdrawal Rate). It suggests that if you withdraw no more than 4% of your portfolio per year, a diversified portfolio of stocks and bonds has a very high probability of lasting 30+ years — even accounting for bad market conditions.</p>
+      <h2>Calculating Your FIRE Number</h2>
+      <p>Your FIRE number is 25× your annual expenses. If you spend €30,000 per year, you need a portfolio of €750,000. When you hit that number and are comfortable with the 4% rule, you are financially independent.</p>
+      <h2>FIRE Variants</h2>
+      <ul>
+        <li><strong>Lean FIRE:</strong> Retiring on a very frugal budget (below €20,000/year). Maximum savings rate required.</li>
+        <li><strong>Fat FIRE:</strong> Retiring with a larger spending budget (€60,000+). Requires a much larger portfolio.</li>
+        <li><strong>Barista FIRE:</strong> Retiring from your main career but doing part-time work to cover some expenses.</li>
+        <li><strong>Coast FIRE:</strong> Having enough invested that you no longer need to add contributions — your existing investments will grow to your FIRE number by traditional retirement age.</li>
+      </ul>
+      <h2>Is FIRE Realistic?</h2>
+      <p>FIRE requires significant sacrifice and discipline. It works best for those with high incomes and low expenses, or those willing to live very frugally for 10–15 years. It is achievable in Europe and the USA with the right strategy, but is not for everyone.</p>
+    `
+  },
+  {
+    id: 4,
+    title: "Compound Interest: The 8th Wonder of the World",
+    category: "investing",
+    catLabel: "Investing",
+    catClass: "cat-investing",
+    author: "James Hartley",
+    date: "April 28, 2026",
+    readTime: "5 min read",
+    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=450&fit=crop",
+    excerpt: "Albert Einstein supposedly called compound interest the 8th wonder of the world. Here's why it is the most powerful force in personal finance and how to harness it.",
+    tags: ["Compound Interest", "Investing", "Long Term", "Wealth Building"],
+    content: `
+      <p>Compound interest is the process by which interest earned on an investment is reinvested, so that in subsequent periods, interest is earned on the original principal <em>plus</em> the accumulated interest. Over time, this creates an exponential growth curve — famously described by Albert Einstein (possibly apocryphally) as "the most powerful force in the universe."</p>
+      <h2>A Simple Example</h2>
+      <p>If you invest €10,000 at a 7% annual return and never touch it: after 10 years you have €19,671; after 20 years, €38,697; after 30 years, €76,123. You invested €10,000 and ended up with €76,000 — without contributing another cent. That is the magic of compounding.</p>
+      <h2>The Time Factor</h2>
+      <p>The single biggest factor in compounding is <strong>time</strong>. Starting to invest at 25 vs 35 can result in a portfolio that is twice as large by age 65, even if you invest the same monthly amount. Every year you delay is exponentially costly.</p>
+      <h2>How to Maximise Compound Growth</h2>
+      <ul>
+        <li>Start investing as early as possible — even small amounts.</li>
+        <li>Reinvest all dividends automatically.</li>
+        <li>Minimise fees — even 1% in fees can cost you tens of thousands over 30 years.</li>
+        <li>Be consistent — monthly contributions accelerate compounding dramatically.</li>
+        <li>Resist the urge to withdraw during market downturns.</li>
+      </ul>
+      <blockquote>"The best time to plant a tree was 20 years ago. The second best time is now."</blockquote>
+      <p>Compound interest rewards patience. The longer you stay invested, the more powerful it becomes. The investors who succeed are not necessarily the ones who pick the best stocks — they are the ones who start earliest and stay the course longest.</p>
+    `
+  },
+  {
+    id: 5,
+    title: "Top 10 Ways to Cut Monthly Expenses Without Sacrifice",
+    category: "personalfinance",
+    catLabel: "Personal Finance",
+    catClass: "cat-personalfinance",
+    author: "James Hartley",
+    date: "April 22, 2026",
+    readTime: "6 min read",
+    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=450&fit=crop",
+    excerpt: "Cutting expenses doesn't mean giving up everything you love. These 10 practical strategies can save you hundreds per month without dramatically changing your lifestyle.",
+    tags: ["Budget", "Save Money", "Expenses", "Frugal Living"],
+    content: `
+      <p>One of the fastest ways to improve your financial situation is to reduce your monthly outgoings. The good news: most people can cut their expenses by 15–20% without any significant lifestyle impact. Here are 10 proven strategies.</p>
+      <h2>1. Audit Your Subscriptions</h2>
+      <p>Log every subscription: streaming services, gym memberships, apps, newspapers. Cancel everything you haven't used in the past 30 days. The average European household has 12+ active subscriptions — many forgotten.</p>
+      <h2>2. Switch Energy Providers</h2>
+      <p>Energy comparison sites (Uswitch in the UK, Verivox in Germany, Facua in Spain) can identify cheaper tariffs in minutes. Switching can save €200–€500 per year.</p>
+      <h2>3. Meal Plan and Batch Cook</h2>
+      <p>Decide your weekly meals before shopping. Buy in bulk. Cook large batches and freeze portions. This alone can cut a food bill by 30–40% compared to buying convenience food or eating out regularly.</p>
+      <h2>4. Review Your Insurance</h2>
+      <p>Compare car, home, and health insurance annually. Loyalty rarely pays — new customers often get better rates. A 10-minute comparison could save you €300/year.</p>
+      <h2>5. Refinance Your Mortgage or Loans</h2>
+      <p>If interest rates have changed since you took out your mortgage or personal loan, refinancing could dramatically reduce your monthly payment.</p>
+      <h2>6. Use Cashback Apps and Cards</h2>
+      <p>Apps like TopCashback, Swagbucks, and cashback credit cards return a percentage of every purchase. On everyday spending, this can amount to €200–€400 per year.</p>
+      <h2>7. Cut the Gym — Exercise Smarter</h2>
+      <p>YouTube, running outdoors, bodyweight training at home, or a cheap local authority leisure centre can replace an expensive gym membership for most people.</p>
+      <h2>8. Negotiate Bills</h2>
+      <p>Call your phone, broadband, and TV providers and ask for a better deal. Simply mentioning you are considering switching often results in an immediate discount.</p>
+      <h2>9. Buy Secondhand</h2>
+      <p>Clothes, furniture, electronics, books — buying secondhand via Vinted, eBay, or Facebook Marketplace saves 50–80% versus new, with minimal quality difference.</p>
+      <h2>10. Automate Savings Before Spending</h2>
+      <p>Set an automatic transfer to your savings account on payday. Whatever is left is your spending budget. This is the most effective budgeting method — because you never see the money to miss it.</p>
+    `
+  },
+  {
+    id: 6,
+    title: "Real Estate Investing for Beginners in Europe: A 2026 Guide",
+    category: "realestate",
+    catLabel: "Real Estate",
+    catClass: "cat-realestate",
+    author: "Sarah Mitchell",
+    date: "Feb 5, 2026",
+    readTime: "9 min read",
+    img: "https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&h=450&fit=crop",
+    excerpt: "Real estate has been a cornerstone of wealth-building for generations. Here's how to get started in the European market, from buy-to-let to REITs and property crowdfunding.",
+    tags: ["Real Estate", "Property", "REIT", "Investing", "Buy-to-Let"],
+    content: `
+      <p>Real estate is one of the most reliable wealth-building assets in history. In Europe, property investment takes many forms — from direct ownership of buy-to-let properties to indirect investment via Real Estate Investment Trusts (REITs) and crowdfunding platforms.</p>
+      <h2>Direct Property Investment (Buy-to-Let)</h2>
+      <p>Buying a property to rent out can generate a regular income stream and long-term capital appreciation. The key metrics are: <strong>gross rental yield</strong> (annual rent ÷ purchase price × 100) and <strong>net rental yield</strong> (after expenses). Average yields in European cities range from 3% in Amsterdam to 7%+ in Warsaw.</p>
+      <h2>REITs: Real Estate Without the Hassle</h2>
+      <p>A REIT is a company that owns income-producing real estate. When you buy shares in a REIT on a stock exchange, you gain exposure to property markets without needing to buy or manage physical property. REITs are legally required to distribute at least 90% of their taxable income as dividends, making them excellent income investments.</p>
+      <h2>Property Crowdfunding</h2>
+      <p>Platforms like Brickstarter, Reinvest24, and Estateguru allow you to invest in individual properties with as little as €50–€100. Returns typically range from 8–12%, but the investments are illiquid and carry platform and property risk.</p>
+      <h2>Key Considerations</h2>
+      <ul>
+        <li><strong>Location:</strong> Always the most important factor. Demand, infrastructure, employment, and population growth drive values.</li>
+        <li><strong>Financing:</strong> Understand mortgage costs, LTV ratios, and stress-test rates before committing.</li>
+        <li><strong>Tax:</strong> Rental income is taxable in all European countries. Capital gains tax applies on sale. Seek local advice.</li>
+        <li><strong>Liquidity:</strong> Unlike stocks, property cannot be sold in minutes. Ensure you have sufficient liquid savings before investing in property.</li>
+      </ul>
+    `
+  },
+  {
+    id: 7,
+    title: "Snowball vs Avalanche: The Best Method to Pay Off Debt Fast",
+    category: "personalfinance",
+    catLabel: "Personal Finance",
+    catClass: "cat-personalfinance",
+    author: "James Hartley",
+    date: "April 18, 2026",
+    readTime: "6 min read",
+    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=450&fit=crop",
+    excerpt: "Whether you have credit card debt, student loans, or a car loan, the debt snowball and debt avalanche methods offer two proven strategies to become debt-free faster.",
+    tags: ["Debt", "Debt Snowball", "Debt Avalanche", "Budget", "Credit Card"],
+    content: `
+      <p>Getting out of debt is one of the most financially impactful things you can do. Two popular structured approaches are the <strong>Debt Snowball</strong> and the <strong>Debt Avalanche</strong>. Both work — the best one depends on your psychology.</p>
+      <h2>The Debt Snowball Method</h2>
+      <p>Popularised by Dave Ramsey, the debt snowball involves listing your debts from smallest to largest balance, regardless of interest rate. You make minimum payments on all debts except the smallest, which you attack aggressively. Once the smallest is paid off, you roll that payment into the next smallest, creating a "snowball" of momentum.</p>
+      <p><strong>Best for:</strong> People who need motivational wins to stay on track. The psychological boost of eliminating debts quickly can be powerful.</p>
+      <h2>The Debt Avalanche Method</h2>
+      <p>The avalanche method lists debts by interest rate, highest first. You attack the highest-rate debt aggressively while making minimums on others. This method is mathematically optimal — you pay the least interest overall.</p>
+      <p><strong>Best for:</strong> Disciplined people who are motivated by numbers and want to minimise total interest paid.</p>
+      <h2>Example Comparison</h2>
+      <p>Suppose you have: Credit card at 22% (€3,000), car loan at 8% (€8,000), student loan at 5% (€15,000). The avalanche method would target the credit card first. The snowball would also target the credit card first in this case — they would coincide. But if the smallest balance had the lowest rate, they diverge significantly.</p>
+      <h2>Universal Tips to Accelerate Debt Repayment</h2>
+      <ul>
+        <li>Transfer high-interest credit card debt to a 0% balance transfer card.</li>
+        <li>Make bi-weekly payments instead of monthly — you end up making one extra payment per year.</li>
+        <li>Apply any unexpected income (bonuses, tax refunds) directly to debt.</li>
+        <li>Avoid taking on new debt while paying off existing balances.</li>
+      </ul>
+    `
+  },
+  {
+    id: 8,
+    title: "Best High-Yield Savings Accounts in Europe 2026",
+    category: "savings",
+    catLabel: "Savings",
+    catClass: "cat-savings",
+    author: "Sarah Mitchell",
+    date: "April 14, 2026",
+    readTime: "5 min read",
+    img: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=800&h=450&fit=crop",
+    excerpt: "With interest rates at decade highs, European savers can now earn meaningful returns on cash. Here are the best high-yield savings accounts and platforms available in 2025.",
+    tags: ["Savings", "High-Yield", "Interest Rates", "Cash", "Europe"],
+    content: `
+      <p>After years of near-zero interest rates, European savers are finally being rewarded for holding cash. The European Central Bank's rate hikes have rippled through to savings products, and there are now several excellent options for parking your emergency fund or short-term savings.</p>
+      <h2>What to Look For in a Savings Account</h2>
+      <ul>
+        <li><strong>AER/APY:</strong> The Annual Equivalent Rate — always compare this, not the monthly rate.</li>
+        <li><strong>Deposit protection:</strong> In the EU, deposits up to €100,000 per bank per person are protected under the Deposit Guarantee Scheme.</li>
+        <li><strong>Access:</strong> Is it an easy-access account, or do you need to lock the money away?</li>
+        <li><strong>Minimum balance:</strong> Some accounts require a minimum opening deposit.</li>
+      </ul>
+      <h2>Top Platforms in 2026</h2>
+      <ul>
+        <li><strong>Trade Republic:</strong> Offers 3.25% AER on uninvested cash with no minimum — available across most of Europe.</li>
+        <li><strong>Raisin:</strong> A pan-European deposit marketplace connecting you with savings accounts from banks across the EU.</li>
+        <li><strong>Revolut Savings Vaults:</strong> Competitive rates depending on plan level; no lock-up period.</li>
+        <li><strong>N26:</strong> Fixed-term deposits at competitive rates via their partner banks.</li>
+      </ul>
+      <p><em>Note: Interest rates change frequently. Always check the current rate directly with the provider before opening an account.</em></p>
+      <h2>Tax on Savings Interest</h2>
+      <p>In most European countries, savings interest is taxable. In the UK, the Personal Savings Allowance allows basic-rate taxpayers to earn £1,000 of interest per year tax-free. In Germany, the Sparerpauschbetrag allows €1,000 (€2,000 for couples) tax-free. Check your local rules.</p>
+    `
+  },
+  {
+    id: 9,
+    title: "Cryptocurrency Tax Guide for European Investors 2026",
+    category: "crypto",
+    catLabel: "Cryptocurrency",
+    catClass: "cat-crypto",
+    author: "Elena Kovach",
+    date: "April 10, 2026",
+    readTime: "8 min read",
+    img: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=450&fit=crop",
+    excerpt: "Crypto taxes confuse many investors. This guide breaks down how cryptocurrency gains are taxed in the UK, Germany, France, Spain and the Netherlands.",
+    tags: ["Crypto", "Tax", "Capital Gains", "Bitcoin", "Europe"],
+    content: `
+      <p>Cryptocurrency taxation across Europe is inconsistent — each country has its own rules. This guide summarises the key rules for the most common European jurisdictions as of 2025. Always consult a tax professional for advice tailored to your situation.</p>
+      <h2>United Kingdom</h2>
+      <p>HMRC treats crypto assets as property. Disposal (selling, trading, using crypto to buy goods) triggers Capital Gains Tax (CGT). The CGT annual allowance was reduced to £3,000 in 2024/25. Basic-rate taxpayers pay 18%; higher-rate taxpayers pay 24% on crypto gains above the allowance.</p>
+      <h2>Germany</h2>
+      <p>Germany is one of the most crypto-friendly jurisdictions in Europe. If you hold cryptocurrency for more than 12 months, gains are <strong>completely tax-free</strong>. Short-term gains (held less than 12 months) are taxed as income at your marginal rate — but only if gains exceed €600 per year.</p>
+      <h2>France</h2>
+      <p>France applies a flat tax (Prélèvement Forfaitaire Unique) of 30% on crypto gains, which includes income tax and social charges. Losses can be offset against gains in the same tax year but cannot be carried forward.</p>
+      <h2>Spain</h2>
+      <p>Crypto gains are subject to savings tax rates in Spain: 19% on the first €6,000; 21% on €6,000–€50,000; 23% on €50,000–€200,000; 27% above €200,000.</p>
+      <h2>General Best Practices</h2>
+      <ul>
+        <li>Keep detailed records of every transaction: date, amount, price at time of transaction, and fees.</li>
+        <li>Use a crypto tax software like Koinly, CoinTracking, or TaxBit to automate calculations.</li>
+        <li>Be aware that staking rewards, airdrops, and DeFi income are generally treated as income in most jurisdictions.</li>
+        <li>Never fail to declare — crypto transactions are increasingly visible to tax authorities via exchange reporting requirements.</li>
+      </ul>
+    `
+  },
+  {
+    id: 10,
+    title: "Stock Market Basics: A Complete Beginner's Guide",
+    category: "investing",
+    catLabel: "Investing",
+    catClass: "cat-investing",
+    author: "James Hartley",
+    date: "April 5, 2026",
+    readTime: "8 min read",
+    img: "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&h=450&fit=crop",
+    excerpt: "Stocks, indices, market caps, P/E ratios — the stock market has its own language. This beginner's guide explains everything you need to know to start investing confidently.",
+    tags: ["Stock Market", "Stocks", "Beginner", "Investing", "Shares"],
+    content: `
+      <p>The stock market can seem intimidating at first, but the fundamental concept is straightforward: <strong>when you buy a share, you own a small piece of a company.</strong> If the company does well, your shares increase in value and you may receive dividends. If it does poorly, your shares may fall in value.</p>
+      <h2>Key Terms You Need to Know</h2>
+      <ul>
+        <li><strong>Share / Stock:</strong> A unit of ownership in a company.</li>
+        <li><strong>Dividend:</strong> A cash payment made by a company to its shareholders, usually quarterly.</li>
+        <li><strong>Market Cap:</strong> Total value of all a company's shares (price × shares outstanding). Determines if it's large-cap, mid-cap, or small-cap.</li>
+        <li><strong>P/E Ratio:</strong> Price-to-Earnings ratio — how much investors pay per £/€/$1 of earnings. A lower P/E may suggest a stock is undervalued.</li>
+        <li><strong>Index:</strong> A basket of stocks used to measure the performance of a market. Examples: S&P 500 (USA), FTSE 100 (UK), DAX (Germany), CAC 40 (France).</li>
+        <li><strong>Bull Market:</strong> A market rising 20%+ from its lows. Bear Market: Falling 20%+ from highs.</li>
+      </ul>
+      <h2>How to Get Started</h2>
+      <ol>
+        <li>Open a brokerage account (e.g. Degiro, Interactive Brokers, Trading 212, eToro in Europe).</li>
+        <li>Decide between individual stocks and index funds/ETFs.</li>
+        <li>Start with a small amount and invest regularly (pound/euro cost averaging).</li>
+        <li>Reinvest dividends for compound growth.</li>
+        <li>Invest for the long term — time in the market beats timing the market.</li>
+      </ol>
+      <h2>Common Beginner Mistakes to Avoid</h2>
+      <ul>
+        <li>Investing money you might need within 5 years.</li>
+        <li>Checking your portfolio every day — this leads to emotional decisions.</li>
+        <li>Trying to time the market or pick individual stocks without research.</li>
+        <li>Ignoring fees — even small percentages compound negatively over time.</li>
+        <li>Selling during market downturns — historically, patience always wins.</li>
+      </ul>
+    `
+  },
+  {
+    id: 11,
+    title: "How to Create a Budget That Actually Works",
+    category: "personalfinance",
+    catLabel: "Personal Finance",
+    catClass: "cat-personalfinance",
+    author: "James Hartley",
+    date: "March 30, 2026",
+    readTime: "6 min read",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop",
+    excerpt: "Most people set budgets and abandon them within weeks. This guide shares the frameworks and mindset shifts that make budgeting stick — and actually build wealth.",
+    tags: ["Budget", "Personal Finance", "50/30/20", "Money Management"],
+    content: `
+      <p>Budgeting has a reputation for being restrictive and boring. But a good budget isn't a cage — it's a <strong>plan for your money that aligns with your values and goals</strong>. Here's how to build one that you'll actually follow.</p>
+      <h2>Choose a Budgeting Framework</h2>
+      <p><strong>50/30/20 Rule:</strong> The simplest approach. Allocate 50% of net income to needs (rent, food, bills), 30% to wants (dining out, entertainment, holidays), and 20% to savings/debt repayment.</p>
+      <p><strong>Zero-Based Budget:</strong> Every pound/euro of income is assigned a "job" until you reach zero. More granular, but very effective for people who want complete control.</p>
+      <p><strong>Pay Yourself First:</strong> Automatically save/invest a set percentage before you do anything else. Build your lifestyle around what's left.</p>
+      <h2>Track Your Spending</h2>
+      <p>You cannot manage what you don't measure. For the first month, track every expense. Use an app (YNAB, Emma, Snoop in the UK) or a simple spreadsheet. Most people are shocked by what they find — especially on food delivery and subscriptions.</p>
+      <h2>Set Realistic Targets</h2>
+      <p>A budget that leaves no room for fun is a budget you will abandon. Build in a "guilt-free spending" category for things you genuinely enjoy. This is sustainable; deprivation is not.</p>
+      <h2>Review Monthly</h2>
+      <p>Spend 20 minutes at the end of each month reviewing your budget. Did you stay on track? Where did you overspend? Adjust categories accordingly. Budgeting is iterative — your first budget won't be perfect, and that's fine.</p>
+    `
+  },
+  {
+    id: 12,
+    title: "Dividend Investing: Earn Passive Income Every Month",
+    category: "investing",
+    catLabel: "Investing",
+    catClass: "cat-investing",
+    author: "Sarah Mitchell",
+    date: "March 25, 2026",
+    readTime: "7 min read",
+    img: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&h=450&fit=crop",
+    excerpt: "Dividend investing is one of the most reliable ways to build a passive income stream. Here's how to build a portfolio of dividend-paying stocks and ETFs that pays you monthly.",
+    tags: ["Dividends", "Passive Income", "Investing", "Income", "Stocks"],
+    content: `
+      <p>Dividend investing involves buying shares in companies that regularly distribute a portion of their profits to shareholders. Done right, it can generate a reliable passive income stream that grows over time — often called "being paid to own stocks."</p>
+      <h2>Key Dividend Metrics</h2>
+      <ul>
+        <li><strong>Dividend Yield:</strong> Annual dividend ÷ share price × 100. A 4% yield on a €10,000 investment pays €400/year.</li>
+        <li><strong>Payout Ratio:</strong> Percentage of earnings paid as dividends. Above 80% may be unsustainable.</li>
+        <li><strong>Dividend Growth Rate:</strong> How much the dividend has grown year-over-year. Consistent growth is a strong quality signal.</li>
+        <li><strong>Dividend Aristocrats:</strong> Companies that have raised their dividend for 25+ consecutive years (S&P 500 definition).</li>
+      </ul>
+      <h2>Building a Monthly Income Portfolio</h2>
+      <p>To receive dividends every month, invest in companies or ETFs with different payment schedules (quarterly payments staggered by month). Alternatively, dividend ETFs like the Vanguard FTSE All-World High Dividend Yield ETF (VHYL) or iShares STOXX Global Select Dividend 100 ETF pay quarterly.</p>
+      <h2>The Power of Dividend Reinvestment</h2>
+      <p>Reinvesting dividends accelerates compound growth significantly. A £50,000 portfolio with a 4% yield that reinvests dividends at 7% total growth will become approximately £380,000 in 30 years. The same portfolio without reinvestment grows to around £200,000. Reinvestment nearly doubles the outcome.</p>
+      <h2>Tax Considerations</h2>
+      <p>Dividends are usually taxed differently from capital gains. In the UK, there is a £500 Dividend Allowance (2024/25); above that, basic-rate taxpayers pay 8.75%. Use tax-efficient wrappers like ISAs (UK) or PEAs (France) to shelter dividend income.</p>
+    `
+  },
+  {
+    id: 13,
+    title: "Life Insurance: Do You Really Need It?",
+    category: "personalfinance",
+    catLabel: "Personal Finance",
+    catClass: "cat-personalfinance",
+    author: "James Hartley",
+    date: "March 20, 2026",
+    readTime: "6 min read",
+    img: "https://images.unsplash.com/photo-1588776814546-1ffbb542bf95?w=800&h=450&fit=crop",
+    excerpt: "Life insurance is often misunderstood. When do you really need it, how much cover is enough, and which type is best — term or whole of life? Here's a clear-headed guide.",
+    tags: ["Life Insurance", "Insurance", "Financial Planning", "Family"],
+    content: `
+      <p>Life insurance pays a lump sum to your beneficiaries if you die during the policy term. But many people are either over-insured (paying for cover they don't need) or under-insured (without adequate protection for their dependants).</p>
+      <h2>Do You Need Life Insurance?</h2>
+      <p>You almost certainly need life insurance if:</p>
+      <ul>
+        <li>You have a partner, children, or other dependants who rely on your income.</li>
+        <li>You have a mortgage or significant debt that would be left to someone else.</li>
+        <li>You run a business with partners or employees who depend on you.</li>
+      </ul>
+      <p>You probably don't need it if you are young, single, have no dependants, and have significant savings that would cover any debts.</p>
+      <h2>Term vs Whole of Life</h2>
+      <p><strong>Term life insurance</strong> covers you for a fixed period (e.g. 20–30 years) and pays out only if you die within the term. It is cheap and straightforward — ideal for covering a mortgage or protecting young children.</p>
+      <p><strong>Whole of life insurance</strong> covers you for your entire life and is guaranteed to pay out. It is significantly more expensive. Some policies include an investment element — but most financial advisers suggest buying cheap term insurance and investing the difference.</p>
+      <h2>How Much Cover Do You Need?</h2>
+      <p>A common rule is 10× your annual income. More precisely: calculate the income your dependants would need for 15–20 years, add outstanding debts (mortgage, loans), and subtract existing savings and any employer death-in-service benefit.</p>
+    `
+  },
+  {
+    id: 14,
+    title: "How to Improve Your Credit Score Fast",
+    category: "personalfinance",
+    catLabel: "Personal Finance",
+    catClass: "cat-personalfinance",
+    author: "Sarah Mitchell",
+    date: "March 13, 2026",
+    readTime: "5 min read",
+    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop",
+    excerpt: "Your credit score affects your ability to get a mortgage, loan, or even a mobile contract. Here are the fastest, most effective ways to boost your score.",
+    tags: ["Credit Score", "Credit Rating", "Mortgage", "Personal Finance"],
+    content: `
+      <p>A good credit score unlocks better mortgage rates, cheaper personal loans, and more favourable credit card terms. Improving your score is one of the highest-return activities you can do financially — potentially saving you thousands on borrowing costs.</p>
+      <h2>What Affects Your Credit Score?</h2>
+      <ul>
+        <li><strong>Payment history (35%):</strong> The most important factor. Always pay at least the minimum on time, every time.</li>
+        <li><strong>Credit utilisation (30%):</strong> How much of your available credit you are using. Keep it below 30% — ideally below 10%.</li>
+        <li><strong>Length of credit history (15%):</strong> Older accounts improve your score. Don't close old credit cards.</li>
+        <li><strong>Credit mix (10%):</strong> A mix of credit types (credit card, loan, mortgage) is positive.</li>
+        <li><strong>New credit (10%):</strong> Every hard application slightly reduces your score. Don't apply for multiple products in a short period.</li>
+      </ul>
+      <h2>Fast Wins to Boost Your Score</h2>
+      <ul>
+        <li>Check your credit report for errors (free at Experian, Equifax, TransUnion) and dispute any inaccuracies.</li>
+        <li>Register on the Electoral Roll at your current address.</li>
+        <li>Pay down credit card balances to reduce utilisation.</li>
+        <li>Set up direct debits for all minimum payments to avoid missed payments.</li>
+        <li>Use a credit-builder card responsibly and pay it in full each month.</li>
+      </ul>
+    `
+  },
+  {
+    id: 15,
+    title: "Index Fund Investing: Warren Buffett's Favourite Strategy",
+    category: "investing",
+    catLabel: "Investing",
+    catClass: "cat-investing",
+    author: "James Hartley",
+    date: "March 10, 2026",
+    readTime: "7 min read",
+    img: "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=800&h=450&fit=crop",
+    excerpt: "Warren Buffett has instructed his estate to invest 90% of the cash he leaves in a low-cost S&P 500 index fund. Here's why index investing beats most active managers.",
+    tags: ["Index Funds", "Passive Investing", "S&P 500", "Warren Buffett", "ETF"],
+    content: `
+      <p>In his 2013 Berkshire Hathaway letter to shareholders, Warren Buffett — one of the greatest investors of all time — wrote that his advice to the trustee of his estate was to put 90% of the cash in a very low-cost S&P 500 index fund. This is remarkable advice, and it should be a signal to every individual investor.</p>
+      <h2>What Is an Index Fund?</h2>
+      <p>An index fund is a type of fund designed to replicate the performance of a specific market index. The most famous is the S&P 500 index fund, which holds all 500 companies in the S&P 500 index in proportion to their market capitalisation. When you buy a single share in the fund, you own a tiny piece of all 500 companies.</p>
+      <h2>Why Index Funds Beat Most Active Managers</h2>
+      <p>Studies consistently show that over a 10–20 year period, around 80–90% of active fund managers underperform their benchmark index, <em>after fees</em>. The higher fees charged by active managers are the primary reason — compounded over decades, even a 1% fee difference results in dramatically lower returns.</p>
+      <h2>Best Index Funds for European Investors</h2>
+      <ul>
+        <li><strong>Vanguard FTSE All-World ETF (VWRL):</strong> ~3,700 stocks from 50+ countries. TER 0.22%.</li>
+        <li><strong>iShares Core MSCI World ETF (IWDA):</strong> ~1,400 stocks from developed markets. TER 0.20%.</li>
+        <li><strong>Amundi S&P 500 ETF:</strong> Tracks the US S&P 500 with very low TER.</li>
+      </ul>
+      <h2>Getting Started</h2>
+      <p>Open an account with a low-cost broker (Degiro, Interactive Brokers), set up a regular monthly investment (£/€100–500+), select a broad world index ETF, reinvest dividends, and don't check it obsessively. This strategy, maintained consistently for 20–30 years, outperforms the vast majority of professional portfolio managers.</p>
+    `
+  },
+  {
+    id: 16,
+    title: "Side Hustles That Can Make You €1,000/Month Extra",
+    category: "savings",
+    catLabel: "Savings",
+    catClass: "cat-savings",
+    author: "Elena Kovach",
+    date: "March 5, 2026",
+    readTime: "8 min read",
+    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop",
+    excerpt: "The fastest way to improve your finances is often to increase your income. These proven side hustles are accessible to people in Europe and the USA and can generate €1,000+ per month.",
+    tags: ["Side Hustle", "Extra Income", "Freelance", "Passive Income"],
+    content: `
+      <p>While cutting expenses helps, there is a limit to how much you can save. But there is no upper limit on how much you can earn. Side hustles have never been more accessible — and many can be started with zero capital.</p>
+      <h2>Freelancing (€500–€3,000+/month)</h2>
+      <p>If you have a marketable skill — writing, graphic design, web development, marketing, translation, video editing — freelancing is the highest-return side hustle available. Platforms like Upwork, Fiverr, and Malt (Europe) connect you with clients worldwide. Many freelancers earn their full-time salary equivalent within 6–12 months.</p>
+      <h2>Selling Digital Products (€200–€2,000+/month)</h2>
+      <p>Digital products — Notion templates, Excel spreadsheets, eBooks, online courses, Lightroom presets, Canva templates — can be created once and sold repeatedly. Platforms include Gumroad, Etsy, Teachable, and Kajabi.</p>
+      <h2>Delivery &amp; Gig Economy (€800–€1,500/month)</h2>
+      <p>Platforms like Deliveroo, Uber Eats, and Gopuff pay immediately and offer complete schedule flexibility. Not passive, but reliable supplemental income with no entry barrier.</p>
+      <h2>Content Creation (€0–€5,000+/month)</h2>
+      <p>Starting a YouTube channel, blog, or podcast takes time to monetise (typically 12–24 months) but can generate substantial income through AdSense, sponsorships, and affiliate marketing. The upfront work is high; the potential income is uncapped.</p>
+      <h2>Renting Assets (€100–€1,000+/month)</h2>
+      <p>Rent out: a spare room (Airbnb), your car when not in use (Turo, Getaround), camera equipment (Fat Llama), or storage space (Stashbee). These are genuinely passive once set up.</p>
+    `
+  },
+  {
+    id: 17,
+    title: "Pension Planning in Europe: A Country-by-Country Guide",
+    category: "retirement",
+    catLabel: "Retirement",
+    catClass: "cat-retirement",
+    author: "Sarah Mitchell",
+    date: "February 28, 2026",
+    readTime: "10 min read",
+    img: "https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?w=800&h=450&fit=crop",
+    excerpt: "State pension systems vary wildly across Europe. Here's what to expect from state pensions in the UK, Germany, France, Spain, Netherlands and beyond — and how to supplement them.",
+    tags: ["Pension", "Retirement", "State Pension", "Europe", "Financial Planning"],
+    content: `
+      <p>Retirement planning in Europe is complicated by the diversity of state pension systems. What's available in Germany differs enormously from France, Spain, or the UK. This guide gives you the essentials for each major country and explains why private supplementary saving is critical everywhere.</p>
+      <h2>United Kingdom</h2>
+      <p>The UK New State Pension currently pays £221.20/week (2024/25) — around £11,500/year. To receive the full amount you need 35 qualifying years of National Insurance contributions. Most financial advisers consider this insufficient to maintain a comfortable retirement, making a workplace or private pension (SIPP) essential.</p>
+      <h2>Germany</h2>
+      <p>Germany's statutory pension (gesetzliche Rentenversicherung) is earnings-related — you earn "points" during your working life, with each point worth roughly €37.60/month (West Germany, 2024). Someone earning the average wage for 45 years receives approximately 48% of their former salary. The Riester-Rente and Rürup-Rente are government-subsidised private pension vehicles.</p>
+      <h2>France</h2>
+      <p>France has a complex multi-pillar system. The basic pension (retraite de base) requires 43 years of contributions for a full pension. A supplementary scheme (AGIRC-ARRCO) operates on a points system for employees.</p>
+      <h2>Spain</h2>
+      <p>Spain's contributory pension system requires at least 15 years of contributions, with 37 years needed for a full pension. The current maximum monthly pension is around €3,175 (2024). Spain also allows private pension plans (planes de pensiones) with tax deductions up to €1,500/year.</p>
+      <h2>Universal Advice</h2>
+      <p>Regardless of which country you live in: start saving privately as early as possible, contribute enough to get any employer match in workplace pensions, use available tax-advantaged wrappers, and periodically review and increase contributions as your income grows.</p>
+    `
+  }
+];
+
+/* ===== CATEGORY METADATA ===== */
+const categoryMeta = {
+  investing:      { label: "Investing",      desc: "In-depth guides on stocks, ETFs, index funds, dividends and building long-term wealth.",           emoji: "📊" },
+  savings:        { label: "Savings",        desc: "Practical strategies to save more, build an emergency fund, and make your cash work harder.", emoji: "💰" },
+  crypto:         { label: "Cryptocurrency", desc: "Cryptocurrency analysis, tax guides, DeFi strategies and market insights.",                      emoji: "₿" },
+  realestate:     { label: "Real Estate",    desc: "Buy-to-let, REITs, property crowdfunding and real estate investment strategies for European and US investors.", emoji: "🏠" },
+  retirement:     { label: "Retirement",     desc: "Pension planning, FIRE movement, state pension guides and long-term retirement strategies.",       emoji: "🧓" },
+  personalfinance:{ label: "Personal Finance",desc: "Budgeting, debt management, credit scores, insurance and everyday money management tips.",         emoji: "💳" }
+};
+
+/* ===== STATE ===== */
+let currentPage = 'home';
+let previousPage = 'home';
+let currentFilter = 'all';
+let currentArticleId = null;
+
+/* ===== NAVIGATION ===== */
+function showPage(pageId) {
+  if (currentPage !== pageId) previousPage = currentPage;
+  currentPage = pageId;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + pageId);
+  if (target) { target.classList.add('active'); }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+function showCategory(cat) {
+  currentFilter = cat;
+  previousPage = currentPage;
+  currentPage = 'category';
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-category').classList.add('active');
+  const meta = categoryMeta[cat];
+  document.getElementById('catPageTag').textContent = meta.emoji + ' ' + meta.label;
+  document.getElementById('catPageTitle').textContent = meta.label + ' — Articles & Guides';
+  document.getElementById('catPageDesc').textContent = meta.desc;
+  renderCategoryArticles(cat);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+function openArticle(id) {
+  previousPage = currentPage;
+  currentArticleId = id;
+  const art = articles[id];
+  document.getElementById('articleCatTag').textContent = art.catLabel;
+  document.getElementById('articleCatTag').className = 'cat-tag ' + art.catClass;
+  document.getElementById('articleTitle').textContent = art.title;
+  document.getElementById('articleAuthor').textContent = art.author;
+  document.getElementById('articleDate').textContent = '📅 ' + art.date;
+  document.getElementById('articleReadTime').textContent = '⏱ ' + art.readTime;
+  document.getElementById('articleImg').src = art.img;
+  document.getElementById('articleImg').alt = art.title;
+  document.getElementById('articleContent').innerHTML = art.content;
+  const tagHTML = art.tags.map(t => `<span class="tag-item" onclick="showPage('articles')">${t}</span>`).join('');
+  document.getElementById('articleTags').innerHTML = tagHTML;
+  renderRelated(id, art.category);
+  currentPage = 'article';
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-article').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goBack() {
+  if (previousPage === 'article') previousPage = 'home';
+  showPage(previousPage === 'category' ? previousPage : (previousPage || 'home'));
+  if (previousPage === 'category') {
+    // Re-show the category page (already rendered)
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-category').classList.add('active');
+  }
+}
+
 function toggleMobile() {
   const menu = document.getElementById('mobileMenu');
   menu.classList.toggle('open');
 }
 
-function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + pageId).classList.add('active');
-  window.scrollTo(0,0);
-}
-
-function showCategory(cat) {
-  alert("Filtering by: " + cat);
-  showPage('articles');
-}
-
-function openArticle(id) {
-  alert("Opening article: " + id);
-}
-
-/* ===== DATOS SIMPLIFICADOS PARA EL EJEMPLO ===== */
-const articles = [
-  { id: 0, title: "How to Build a 6-Month Emergency Fund", excerpt: "Learn the basics of saving." },
-  { id: 1, title: "Bitcoin vs Gold in 2026", excerpt: "Where to put your money?" },
-  { id: 2, title: "Real Estate for Beginners", excerpt: "Start your property journey." }
-];
-
-document.addEventListener('DOMContentLoaded', () => {
-  const grid = document.getElementById('homeArticlesGrid');
-  grid.innerHTML = articles.map(art => `
+/* ===== RENDER FUNCTIONS ===== */
+function makeCard(art) {
+  return `
     <div class="article-card" onclick="openArticle(${art.id})">
-      <h3>${art.title}</h3>
-      <p>${art.excerpt}</p>
-    </div>
-  `).join('');
+      <img src="${art.img}" alt="${art.title}" loading="lazy" />
+      <div class="article-card-body">
+        <span class="cat-tag ${art.catClass}">${art.catLabel}</span>
+        <h3>${art.title}</h3>
+        <p>${art.excerpt}</p>
+        <div class="article-card-footer">
+          <span class="article-meta">📅 ${art.date} · ⏱ ${art.readTime}</span>
+          <span class="read-more">Read more →</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderHomeGrids() {
+  const latest = articles.slice(0, 6);
+  document.getElementById('homeArticlesGrid').innerHTML = latest.map(makeCard).join('');
+  const investing = articles.filter(a => a.category === 'investing').slice(0, 2);
+  document.getElementById('homeInvestingGrid').innerHTML = investing.map(makeCard).join('');
+  const pf = articles.filter(a => a.category === 'personalfinance').slice(0, 2);
+  document.getElementById('homePFGrid').innerHTML = pf.map(makeCard).join('');
+  const crypto = articles.filter(a => a.category === 'crypto').slice(0, 3);
+  document.getElementById('homeCryptoGrid').innerHTML = crypto.map(makeCard).join('');
+}
+
+function renderAllArticles(filter) {
+  let filtered = filter === 'all' ? articles : articles.filter(a => a.category === filter);
+  const searchVal = document.getElementById('searchInput') ? document.getElementById('searchInput').value.toLowerCase() : '';
+  if (searchVal) filtered = filtered.filter(a => a.title.toLowerCase().includes(searchVal) || a.excerpt.toLowerCase().includes(searchVal));
+  document.getElementById('allArticlesGrid').innerHTML = filtered.length ? filtered.map(makeCard).join('') : '<p style="color:var(--text-muted);font-family:var(--font-ui);padding:20px;">No articles found matching your search.</p>';
+}
+
+function renderCategoryArticles(cat) {
+  const filtered = articles.filter(a => a.category === cat);
+  document.getElementById('catArticlesGrid').innerHTML = filtered.length ? filtered.map(makeCard).join('') : '<p style="color:var(--text-muted);font-family:var(--font-ui);padding:20px;">No articles in this category yet.</p>';
+}
+
+function renderRelated(currentId, cat) {
+  const related = articles.filter(a => a.category === cat && a.id !== currentId).slice(0, 4);
+  document.getElementById('relatedArticlesGrid').innerHTML = related.map(makeCard).join('');
+}
+
+/* ===== FILTER FUNCTIONS ===== */
+function filterByCategory(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderAllArticles(cat);
+}
+
+function filterArticles() {
+  renderAllArticles(currentFilter);
+}
+
+function changePage(dir) {
+  // Pagination placeholder — in a real implementation would paginate
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ===== CONTACT FORM ===== */
+function submitContact() {
+  const name = document.getElementById('contactName').value.trim();
+  const email = document.getElementById('contactEmail').value.trim();
+  const msg = document.getElementById('contactMessage').value.trim();
+  const privacy = document.getElementById('contactPrivacy').checked;
+  if (!name || !email || !msg) { alert('Please fill in all required fields (Name, Email, Message).'); return; }
+  if (!privacy) { alert('Please agree to the Privacy Policy before sending.'); return; }
+  if (!validateEmail(email)) { alert('Please enter a valid email address.'); return; }
+  const success = document.getElementById('contactSuccess');
+  success.style.display = 'block';
+  document.getElementById('contactName').value = '';
+  document.getElementById('contactEmail').value = '';
+  document.getElementById('contactMessage').value = '';
+  document.getElementById('contactPrivacy').checked = false;
+  setTimeout(() => { success.style.display = 'none'; }, 6000);
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+/* ===== NEWSLETTER ===== */
+function subscribeNewsletter(inputId) {
+  const input = document.getElementById(inputId);
+  if (!input || !input.value.trim()) { alert('Please enter your email address.'); return; }
+  if (!validateEmail(input.value.trim())) { alert('Please enter a valid email address.'); return; }
+  alert('✅ Thank you for subscribing! Check your inbox for a confirmation email.');
+  input.value = '';
+}
+
+/* ===== SHARE ===== */
+function shareArticle(platform) {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(articles[currentArticleId] ? articles[currentArticleId].title : 'WealthEdge Article');
+  const urls = {
+    twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}&via=WealthEdgeBlog`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`
+  };
+  window.open(urls[platform] || '#', '_blank', 'width=600,height=400');
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    alert('🔗 Link copied to clipboard!');
+  }).catch(() => {
+    const el = document.createElement('textarea');
+    el.value = window.location.href;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert('🔗 Link copied!');
+  });
+}
+
+/* ===== COOKIES ===== */
+function acceptCookies() {
+  localStorage.setItem('we_cookie_consent', 'accepted');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+function dismissCookies() {
+  localStorage.setItem('we_cookie_consent', 'declined');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+function checkCookies() {
+  if (localStorage.getItem('we_cookie_consent')) {
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+}
+
+/* ===== SCROLL TO TOP ===== */
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('scrollTop');
+  if (window.scrollY > 400) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+/* ===== INIT ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  renderHomeGrids();
+  renderAllArticles('all');
+  checkCookies();
 });
 </script>
-
 </body>
 </html>
