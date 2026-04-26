@@ -113,6 +113,56 @@
       --font-body: 'Source Serif 4', Georgia, serif;
       --font-ui: 'DM Sans', sans-serif;
     }
+
+    /* --- DISEÑO DE ANUNCIOS (ESTILO NOTICIAS) --- */
+
+/* 1. Barra negra superior para el anuncio grande */
+.ad-top-black-bar {
+    background: #000000; /* Negro puro como en tu foto */
+    padding: 25px 0;
+    text-align: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* 2. Anuncio flotante a la izquierda (tipo PDF) */
+.ad-side-floating {
+    position: fixed;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+/* 3. Anuncio pegado abajo (Pill/Sticky) */
+.ad-bottom-sticky {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8px;
+    border-radius: 40px; /* Bordes redondeados como en la imagen */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    z-index: 1000;
+    max-width: 95%;
+}
+
+/* Ajuste: Si la pantalla es pequeña (móvil), escondemos el lateral 
+   para que no tape el texto del artículo */
+@media (max-width: 1100px) {
+    .ad-side-floating {
+        display: none !important;
+    }
+}
+
+/* Ajuste para que el cuerpo del artículo deje espacio al anuncio lateral en PC */
+@media (min-width: 1101px) {
+    #page-article .container {
+        padding-left: 180px; /* Deja hueco al anuncio de 160px */
+    }
+}
 /* --- Estilo Menú Móvil --- */
 #mobileMenu {
     display: none;
